@@ -1,0 +1,175 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\context\\map\\productmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\context\\map\\productmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\context\\stockdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\context\\stockdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\helper\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\helper\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StockDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Context\\StockDbContext.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Context\\StockDbContext.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Context\\StockDbContext.cs",
+              "RelativeToolTip": "BackendStockSystem\\Context\\StockDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:40:22.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductMap.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Context\\Map\\ProductMap.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Context\\Map\\ProductMap.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Context\\Map\\ProductMap.cs",
+              "RelativeToolTip": "BackendStockSystem\\Context\\Map\\ProductMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:37:27.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "BackendStockSystem\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:26:26.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\ProductService.cs",
+              "RelativeToolTip": "BackendStockSystem\\Services\\ProductService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAA2wGUAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T03:45:21.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\IProductService.cs",
+              "RelativeToolTip": "BackendStockSystem\\Services\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T03:44:46.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "BackendStockSystem\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAIwF0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T03:31:01.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
+              "RelativeToolTip": "BackendStockSystem\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T02:49:19.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
+              "RelativeToolTip": "BackendStockSystem\\Models\\UserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T02:38:20.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Helper\\UserSession.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Helper\\UserSession.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Helper\\UserSession.cs",
+              "RelativeToolTip": "BackendStockSystem\\Helper\\UserSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T01:53:25.92Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

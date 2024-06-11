@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RQIGMHaAVnpz9do035LzzQYrpXBUSAFDQAevCKSv9XQ=",
+  "Source": "BackendStockSystem",
+  "BasePath": "_content/BackendStockSystem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
