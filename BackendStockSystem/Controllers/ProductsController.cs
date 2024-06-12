@@ -1,4 +1,4 @@
-﻿using BackendStockSystem.Helper;
+﻿using BackendStockSystem.Helpers;
 using BackendStockSystem.Models;
 using BackendStockSystem.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -11,12 +11,14 @@ namespace BackendStockSystem.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
-        private readonly IUserSession _userSession;
+        private readonly JWTService _jwtService;
+        private readonly IUserService _userService;
 
-        public ProductsController(IProductService productService, IUserSession userSession)
+        public ProductsController(IProductService productService, JWTService jwtService, IUserService userService)
         {
             _productService = productService;
-            _userSession = userSession;
+            _jwtService = jwtService;
+            _userService = userService;
         }
 
         [HttpGet]
@@ -24,10 +26,14 @@ namespace BackendStockSystem.Controllers
         {
             try
             {
-                UserModel user = _userSession.GetUserSession();
-                if (user != null)
+                string jwt = Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+
+                int userId = int.Parse(token.Issuer);
+                
+                if (token != null)
                 {
-                    IEnumerable<ProductModel> products = await _productService.GetProducts(user.Id);
+                    IEnumerable<ProductModel> products = await _productService.GetProducts(userId);
                     return Ok(products);
                 } else
                 return BadRequest("Faça login para acessar seu estoque!");
@@ -43,10 +49,13 @@ namespace BackendStockSystem.Controllers
         {
             try
             {
-                UserModel user = _userSession.GetUserSession();
-                if (user != null)
+                string jwt = Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+
+                int userId = int.Parse(token.Issuer);
+                if (token != null)
                 {
-                    productModel.UserId = user.Id;
+                    productModel.UserId = userId;
                     await _productService.CreateProduct(productModel);
                     return Created();
                 } else
@@ -64,10 +73,13 @@ namespace BackendStockSystem.Controllers
         {
             try
             {
-                UserModel user = _userSession.GetUserSession();
-                if (user != null)
+                string jwt = Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+
+                int userId = int.Parse(token.Issuer);
+                if (token != null)
                 {
-                    productModel.UserId = user.Id;
+                    productModel.UserId = userId;
                     ProductModel productDb = await _productService.GetProductById(productModel.Id);
 
                     productDb.Name = productModel.Name;

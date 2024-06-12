@@ -42,7 +42,7 @@ namespace BackendStockSystem.Services
             }
         }
 
-        public async Task<UserModel> GetUserByPhoneNumber(int phoneNumber)
+        public async Task<UserModel> GetUserByPhoneNumber(string phoneNumber)
         {
             try
             {

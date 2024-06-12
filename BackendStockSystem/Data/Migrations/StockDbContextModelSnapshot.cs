@@ -92,8 +92,9 @@ namespace BackendStockSystem.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("integer");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateOnly?>("RegistrationDate")
                         .HasColumnType("date");

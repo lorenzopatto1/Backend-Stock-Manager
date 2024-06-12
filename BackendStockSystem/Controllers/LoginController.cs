@@ -1,46 +1,55 @@
-﻿using BackendStockSystem.Helper;
+﻿using BackendStockSystem.Helpers;
 using BackendStockSystem.Models;
 using BackendStockSystem.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.CompilerServices;
 
 namespace BackendStockSystem.Controllers
 {
-    [Route("/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly IUserSession _userSession;
+        private readonly JWTService _jwtService;
 
-        public LoginController(IUserService userService, IUserSession userSession)
+        public LoginController(IUserService userService, JWTService jwtService)
         {
             _userService = userService;
-            _userSession = userSession;
+            _jwtService = jwtService;
         }
-        [HttpPost]
+        [HttpPost("/Signin")]
         public async Task<ActionResult<UserModel>> SignIn(LoginModel loginModel)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    UserModel user = await _userService.GetUserByEmailAddress(loginModel.EmailAddress);
-                    if (_userSession.GetUserSession() != null) return BadRequest("O usuário ja está logado");
+                    UserModel user = await _userService.GetUserByEmailAddress(loginModel.Login);
                     if (user == null)
                     {
-                        user = await _userService.GetUserByPhoneNumber(loginModel.PhoneNumber);
+                        user = await _userService.GetUserByPhoneNumber(loginModel.Login);
                     }
                     if (user != null)
                     {
                         if (user.ValidPassword(loginModel.Password))
                         {
-                            _userSession.CreateUserSession(user);
-                            return Ok(user);
+                            var jwt = _jwtService.Generate(user.Id);
+                            var tokenHandler = new JwtSecurityTokenHandler();
+                            var jwtToken = tokenHandler.ReadJwtToken(jwt);
+                            var expiration = jwtToken.ValidTo;
+
+                            Response.Cookies.Append("jwt", jwt, new CookieOptions
+                            {
+                                HttpOnly = true,
+                                IsEssential = true,
+                            });
+
+                            return Ok(new {message = "Success" });
                         }
                     }
                 }
-                    return BadRequest();
+                    return BadRequest(new {message = "Informações inválidas"});
             }
             catch (Exception error)
             {
@@ -48,18 +57,31 @@ namespace BackendStockSystem.Controllers
                 throw new Exception($"Houve um problema ao tentar fazer login, detalhes do erro: {error.Message}");
             }
         }
-        [Route("/Signout")]
-        [HttpGet]
+        [HttpPost("/Signout")]
         public ActionResult UserSignOut()
+        {
+            Response.Cookies.Delete("jwt");
+            return Ok(new { message = "Success" });
+        }
+        [HttpGet("/User")]
+        public async Task<ActionResult> User()
         {
             try
             {
-                _userSession.RemoveUserSession();
-                return Ok();
+                var jwt = Request.Cookies["jwt"];
+
+                var token = _jwtService.Verify(jwt);
+
+                int userId = int.Parse(token.Issuer);
+
+                UserModel user = await _userService.GetUserById(userId);
+
+                return Ok(user);
             }
-            catch (Exception error)
+            catch (Exception _)
             {
-                throw new Exception($"Houve um problema, detalhes do erro: {error.Message}");
+
+                return Unauthorized();
             }
         }
     }

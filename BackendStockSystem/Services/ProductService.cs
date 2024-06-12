@@ -1,5 +1,5 @@
 ﻿using BackendStockSystem.Context;
-using BackendStockSystem.Helper;
+using BackendStockSystem.Helpers;
 using BackendStockSystem.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,11 +8,12 @@ namespace BackendStockSystem.Services
     public class ProductService : IProductService
     {
         private readonly StockDbContext _context;
-        private readonly IUserSession _userSession;
-        public ProductService(StockDbContext context, IUserSession userSession)
+        private readonly JWTService _jwtService;
+
+        public ProductService(StockDbContext context, JWTService jwtService)
         {
             _context = context;
-            _userSession = userSession;
+            _jwtService = jwtService;
         }
         public async Task<IEnumerable<ProductModel>> GetProducts(int id)
         {
@@ -32,17 +33,11 @@ namespace BackendStockSystem.Services
         {
             try
             {
-                IEnumerable<ProductModel> products;
                 if (!string.IsNullOrEmpty(group))
-                    products = await _context.Products.Where(product => product.Group == group).ToListAsync();
-                else
-                {
-                    UserModel user = _userSession.GetUserSession();
-                    products = await GetProducts(user.Id);
-                }
-                return products;
-                throw new NotImplementedException();
+                   return await _context.Products.Where(product => product.Group == group).ToListAsync();
 
+                throw new Exception("Grupo não encontrado");
+                
             }
             catch (Exception error)
             {

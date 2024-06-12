@@ -19,7 +19,7 @@ namespace BackendStockSystem.Models
         [Required(ErrorMessage = "Por favor, insira o grupo/categoria do produto")]
         public string Group { get; set; }
 
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         
         public UserModel User { get; set; }
     }

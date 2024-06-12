@@ -15,7 +15,7 @@ namespace BackendStockSystem.Models
         [EmailAddress(ErrorMessage = "O formato do e-mail está incorreto, corrija-o e tente novamente!")]
         public string EmailAddress { get; set; }
         [Required(ErrorMessage = "Por favor, insira seu telefone")]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         [Required(ErrorMessage = "Por favor, selecione seu gênero")]
         public GenderEnum? Gender { get; set; }
         [Required(ErrorMessage = "Por favor, insira sua senha")]
