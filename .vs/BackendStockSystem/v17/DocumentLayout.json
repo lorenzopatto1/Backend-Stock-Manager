@@ -62,8 +62,7 @@
               "RelativeToolTip": "BackendStockSystem\\Helpers\\JWTService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T01:09:12.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T01:09:12.305Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "BackendStockSystem\\Services\\ProductService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T01:10:16.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T01:10:16.247Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "BackendStockSystem\\Controllers\\ProductsController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAqwBwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T23:41:18.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T23:41:18.753Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "BackendStockSystem\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T20:20:37.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T20:20:37.078Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "BackendStockSystem\\Models\\UserModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T19:52:45.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T19:52:45.273Z"
             },
             {
               "$type": "Document",
@@ -127,8 +122,7 @@
               "RelativeToolTip": "BackendStockSystem\\Models\\ProductModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:20:33.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T18:20:33.208Z"
             },
             {
               "$type": "Document",
@@ -140,8 +134,7 @@
               "RelativeToolTip": "BackendStockSystem\\Services\\UserService.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAgwAcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:10:24.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T18:10:24.842Z"
             },
             {
               "$type": "Document",
@@ -151,7 +144,7 @@
               "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
               "RelativeToolTip": "BackendStockSystem\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAQwCsAAAAwAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAxwBQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T18:09:12.413Z",
               "EditorCaption": ""
@@ -166,8 +159,7 @@
               "RelativeToolTip": "BackendStockSystem\\Models\\LoginModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:08:46.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T18:08:46.817Z"
             }
           ]
         }
