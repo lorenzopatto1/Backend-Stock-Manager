@@ -47,11 +47,12 @@ namespace BackendStockSystem.Data.Migrations
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("numeric");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
+                        .IsRequired()
                         .HasColumnType("integer");
 
-                    b.Property<DateOnly?>("ValidationDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime?>("ValidationDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal?>("WholesaleMinimalQuantity")
                         .HasColumnType("numeric");
@@ -89,7 +90,6 @@ namespace BackendStockSystem.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("PhoneNumber")
@@ -98,6 +98,10 @@ namespace BackendStockSystem.Data.Migrations
 
                     b.Property<DateOnly?>("RegistrationDate")
                         .HasColumnType("date");
+
+                    b.Property<string>("StoreName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

@@ -2,8 +2,8 @@
 using BackendStockSystem.Models;
 using BackendStockSystem.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.CompilerServices;
 
 namespace BackendStockSystem.Controllers
 {
@@ -37,15 +37,17 @@ namespace BackendStockSystem.Controllers
                             var jwt = _jwtService.Generate(user.Id);
                             var tokenHandler = new JwtSecurityTokenHandler();
                             var jwtToken = tokenHandler.ReadJwtToken(jwt);
-                            var expiration = jwtToken.ValidTo;
 
-                            Response.Cookies.Append("jwt", jwt, new CookieOptions
+                            Response.Cookies.Append("token", jwt, new CookieOptions
                             {
                                 HttpOnly = true,
                                 IsEssential = true,
+                                Secure = false,
+                                Expires = DateTime.Now.AddDays(1),
+                                SameSite = SameSiteMode.Lax
                             });
 
-                            return Ok(new {message = "Success" });
+                            return Ok(new {message = "Success", token = jwt });
                         }
                     }
                 }
@@ -60,19 +62,16 @@ namespace BackendStockSystem.Controllers
         [HttpPost("/Signout")]
         public ActionResult UserSignOut()
         {
-            Response.Cookies.Delete("jwt");
+            Response.Cookies.Delete("token");
             return Ok(new { message = "Success" });
         }
         [HttpGet("/User")]
-        public async Task<ActionResult> User()
+        public async Task<ActionResult> User(string token )
         {
             try
             {
-                var jwt = Request.Cookies["jwt"];
-
-                var token = _jwtService.Verify(jwt);
-
-                int userId = int.Parse(token.Issuer);
+                var validateToken = _jwtService.Verify(token);
+                int userId = int.Parse(validateToken.Issuer);
 
                 UserModel user = await _userService.GetUserById(userId);
 
@@ -82,6 +81,29 @@ namespace BackendStockSystem.Controllers
             {
 
                 return Unauthorized();
+            }
+        }
+        [HttpPut("/User")]
+        public async Task<ActionResult> EditUser(string token, string storeName)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var validateToken = _jwtService.Verify(token);
+                    int userId = int.Parse(validateToken.Issuer);
+
+                    await _userService.UpdateStoreNameUser(userId, storeName);
+                    return Ok();
+
+                }
+                else
+                    return Unauthorized();
+
+            }
+            catch (SecurityTokenException)
+            {
+                return BadRequest(new { message = "Usuário não autenticado" });
             }
         }
     }

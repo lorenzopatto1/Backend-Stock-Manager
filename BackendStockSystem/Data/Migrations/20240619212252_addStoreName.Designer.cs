@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackendStockSystem.Data.Migrations
 {
     [DbContext(typeof(StockDbContext))]
-    [Migration("20240610211904_AttProducts")]
-    partial class AttProducts
+    [Migration("20240619212252_addStoreName")]
+    partial class addStoreName
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,13 +51,11 @@ namespace BackendStockSystem.Data.Migrations
                         .HasColumnType("numeric");
 
                     b.Property<int?>("UserId")
+                        .IsRequired()
                         .HasColumnType("integer");
 
-                    b.Property<int?>("UserModelId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateOnly?>("ValidationDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime?>("ValidationDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal?>("WholesaleMinimalQuantity")
                         .HasColumnType("numeric");
@@ -67,7 +65,7 @@ namespace BackendStockSystem.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserModelId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Products");
                 });
@@ -92,18 +90,22 @@ namespace BackendStockSystem.Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("integer");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateOnly?>("RegistrationDate")
                         .HasColumnType("date");
+
+                    b.Property<string>("StoreName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -112,9 +114,13 @@ namespace BackendStockSystem.Data.Migrations
 
             modelBuilder.Entity("BackendStockSystem.Models.ProductModel", b =>
                 {
-                    b.HasOne("BackendStockSystem.Models.UserModel", null)
+                    b.HasOne("BackendStockSystem.Models.UserModel", "User")
                         .WithMany("Products")
-                        .HasForeignKey("UserModelId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BackendStockSystem.Models.UserModel", b =>

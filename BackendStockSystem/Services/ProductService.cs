@@ -19,7 +19,7 @@ namespace BackendStockSystem.Services
         {
             try
             {
-                return await _context.Products.Where(product => product.UserId == id). ToListAsync();
+                return await _context.Products.Where(product => product.UserId == id).ToListAsync();
 
             }
             catch (Exception error)
@@ -34,10 +34,25 @@ namespace BackendStockSystem.Services
             try
             {
                 if (!string.IsNullOrEmpty(group))
-                   return await _context.Products.Where(product => product.Group == group).ToListAsync();
+                    return await _context.Products.Where(product => product.Group.ToLower() == group.ToLower()).ToListAsync();
 
                 throw new Exception("Grupo não encontrado");
-                
+
+            }
+            catch (Exception error)
+            {
+
+                throw new Exception($"Houve um erro ao encontrar a categoria do produto, detalhe do erro: {error.Message}");
+            };
+        }
+        public async Task<IEnumerable<string>> GetCategory()
+        {
+            try
+            {
+                return await _context.Products.Select(product => product.Group).Distinct().ToListAsync();
+
+                throw new Exception("Grupo não encontrado");
+
             }
             catch (Exception error)
             {
@@ -50,7 +65,22 @@ namespace BackendStockSystem.Services
         {
             try
             {
-                return await _context.Products.FindAsync(id);
+                var product = await _context.Products.FindAsync(id);
+
+                return product;
+
+            }
+            catch (Exception error)
+            {
+
+                throw new Exception($"Houve um erro ao encontrar o id do produto, detalhe do erro: {error.Message}");
+            };
+        }
+        public async Task<IEnumerable<ProductPricesAndQuantityModel>> GetPurchaseAndSaleAndQuantity()
+        {
+            try
+            {
+                return await _context.Products.Select(product => new ProductPricesAndQuantityModel { PurchasePrice = product.PurchasePrice, SalePrice = product.SalePrice, Quantity = product.Quantity }).ToListAsync();
 
             }
             catch (Exception error)
@@ -94,9 +124,9 @@ namespace BackendStockSystem.Services
                 ProductModel productDb = await _context.Products.Where(product => product.Id == id).FirstOrDefaultAsync();
                 if (id != null)
                 {
-                _context.Products.Remove(productDb);
+                    _context.Products.Remove(productDb);
 
-                await _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
                 }
             }
             catch (Exception error)
@@ -105,5 +135,5 @@ namespace BackendStockSystem.Services
                 throw new Exception($"Houve um erro ao tentar apagar o produto, detalhe do erro: {error.Message}");
             }
         }
-   }
+    }
 }

@@ -15,7 +15,7 @@ namespace BackendStockSystem.Models
         public decimal SalePrice { get; set; }
         public decimal? WholesaleMinimalQuantity { get; set; }
         public decimal? WholesaleUnityPrice { get; set; }
-        public DateOnly? ValidationDate { get; set; }
+        public DateTime? ValidationDate { get; set; }
         [Required(ErrorMessage = "Por favor, insira o grupo/categoria do produto")]
         public string Group { get; set; }
 

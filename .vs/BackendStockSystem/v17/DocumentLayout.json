@@ -7,36 +7,24 @@
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\onedrive\\documentos\\backendstocksystem\\backendstocksystem\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,87 +42,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JWTService.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Helpers\\JWTService.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Helpers\\JWTService.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Helpers\\JWTService.cs",
-              "RelativeToolTip": "BackendStockSystem\\Helpers\\JWTService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T01:09:12.305Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\ProductService.cs",
-              "RelativeToolTip": "BackendStockSystem\\Services\\ProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAA2AAAA",
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\IUserService.cs",
+              "RelativeToolTip": "BackendStockSystem\\Services\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T01:10:16.247Z"
+              "WhenOpened": "2024-06-19T22:05:32.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "BackendStockSystem\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAqwBwAAAA0AAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T23:41:18.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
-              "RelativeToolTip": "BackendStockSystem\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T20:20:37.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\UserModel.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
-              "RelativeToolTip": "BackendStockSystem\\Models\\UserModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T19:52:45.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\ProductModel.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\ProductModel.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\ProductModel.cs",
-              "RelativeToolTip": "BackendStockSystem\\Models\\ProductModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:20:33.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
-              "RelativeToolTip": "BackendStockSystem\\Services\\UserService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwAcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:10:24.842Z"
+              "WhenOpened": "2024-06-19T22:30:33.184Z"
             },
             {
               "$type": "Document",
@@ -144,22 +72,46 @@
               "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
               "RelativeToolTip": "BackendStockSystem\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAxwBQAAAAdAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAowFkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:09:12.413Z",
+              "WhenOpened": "2024-06-19T21:28:26.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\LoginModel.cs",
-              "RelativeToolTip": "BackendStockSystem\\Models\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA9AAAA",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
+              "RelativeToolTip": "BackendStockSystem\\Services\\UserService.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAYwEUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:08:46.817Z"
+              "WhenOpened": "2024-06-19T21:25:46.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\ProductService.cs",
+              "RelativeToolTip": "BackendStockSystem\\Services\\ProductService.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAIwEUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T22:25:37.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\loren\\OneDrive\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
+              "RelativeToolTip": "BackendStockSystem\\Models\\UserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T17:03:42.315Z"
             }
           ]
         }

@@ -108,6 +108,9 @@
 /mnt/c/Users/loren/OneDrive/Documentos/BackendStockSystem/BackendStockSystem/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
 /mnt/c/Users/loren/OneDrive/Documentos/BackendStockSystem/BackendStockSystem/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /mnt/c/Users/loren/OneDrive/Documentos/BackendStockSystem/BackendStockSystem/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/mnt/c/Users/loren/OneDrive/Documentos/BackendStockSystem/BackendStockSystem/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/mnt/c/Users/loren/OneDrive/Documentos/BackendStockSystem/BackendStockSystem/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/mnt/c/Users/loren/OneDrive/Documentos/BackendStockSystem/BackendStockSystem/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Debug\net8.0\BackendStockSystem.csproj.AssemblyReference.cache
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Debug\net8.0\BackendStockSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Debug\net8.0\BackendStockSystem.AssemblyInfoInputs.cache
@@ -124,6 +127,7 @@ C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Deb
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\BackendStockSystem.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\BackendStockSystem.pdb
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Humanizer.dll
+C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -137,6 +141,8 @@ C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Deb
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Mono.TextTemplating.dll
@@ -218,6 +224,3 @@ C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Deb
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Debug\net8.0\BackendStockSystem.pdb
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Debug\net8.0\BackendStockSystem.genruntimeconfig.cache
 C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\obj\Debug\net8.0\ref\BackendStockSystem.dll
-C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\loren\OneDrive\Documentos\BackendStockSystem\BackendStockSystem\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

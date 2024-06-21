@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackendStockSystem.Data.Migrations
 {
     [DbContext(typeof(StockDbContext))]
-    [Migration("20240610190038_CreateTableUsersAndProducts")]
-    partial class CreateTableUsersAndProducts
+    [Migration("20240612195258_LinkedProductToUser")]
+    partial class LinkedProductToUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,12 +33,13 @@ namespace BackendStockSystem.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Group")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Profit")
-                        .HasColumnType("numeric");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<decimal>("PurchasePrice")
                         .HasColumnType("numeric");
@@ -49,15 +50,22 @@ namespace BackendStockSystem.Data.Migrations
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("numeric");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
+                        .IsRequired()
                         .HasColumnType("integer");
 
-                    b.Property<int?>("UserModelId")
-                        .HasColumnType("integer");
+                    b.Property<DateOnly?>("ValidationDate")
+                        .HasColumnType("date");
+
+                    b.Property<decimal?>("WholesaleMinimalQuantity")
+                        .HasColumnType("numeric");
+
+                    b.Property<decimal?>("WholesaleUnityPrice")
+                        .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserModelId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Products");
                 });
@@ -78,20 +86,19 @@ namespace BackendStockSystem.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("Gender")
+                        .HasColumnType("integer");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("integer");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateOnly?>("RegistrationDate")
                         .HasColumnType("date");
@@ -103,9 +110,13 @@ namespace BackendStockSystem.Data.Migrations
 
             modelBuilder.Entity("BackendStockSystem.Models.ProductModel", b =>
                 {
-                    b.HasOne("BackendStockSystem.Models.UserModel", null)
+                    b.HasOne("BackendStockSystem.Models.UserModel", "User")
                         .WithMany("Products")
-                        .HasForeignKey("UserModelId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BackendStockSystem.Models.UserModel", b =>

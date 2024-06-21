@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackendStockSystem.Data.Migrations
 {
     [DbContext(typeof(StockDbContext))]
-    [Migration("20240611134259_LinkedProductToUser")]
-    partial class LinkedProductToUser
+    [Migration("20240620005818_passwordNullable")]
+    partial class passwordNullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,11 +50,12 @@ namespace BackendStockSystem.Data.Migrations
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("numeric");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
+                        .IsRequired()
                         .HasColumnType("integer");
 
-                    b.Property<DateOnly?>("ValidationDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime?>("ValidationDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal?>("WholesaleMinimalQuantity")
                         .HasColumnType("numeric");
@@ -92,14 +93,18 @@ namespace BackendStockSystem.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("integer");
-
                     b.Property<DateOnly?>("RegistrationDate")
                         .HasColumnType("date");
+
+                    b.Property<string>("StoreName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

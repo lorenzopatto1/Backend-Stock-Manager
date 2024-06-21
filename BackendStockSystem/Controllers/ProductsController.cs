@@ -1,8 +1,8 @@
 ﻿using BackendStockSystem.Helpers;
 using BackendStockSystem.Models;
 using BackendStockSystem.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BackendStockSystem.Controllers
 {
@@ -22,103 +22,172 @@ namespace BackendStockSystem.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IAsyncEnumerable<ProductModel>>> GetProducts()
+        public async Task<ActionResult<IAsyncEnumerable<ProductModel>>> GetProducts(string token)
         {
             try
             {
-                string jwt = Request.Cookies["jwt"];
-                var token = _jwtService.Verify(jwt);
+                var validateToken = _jwtService.Verify(token);
 
-                int userId = int.Parse(token.Issuer);
-                
-                if (token != null)
-                {
-                    IEnumerable<ProductModel> products = await _productService.GetProducts(userId);
-                    return Ok(products);
-                } else
-                return BadRequest("Faça login para acessar seu estoque!");
+                int userId = int.Parse(validateToken.Issuer);
+
+                IEnumerable<ProductModel> products = await _productService.GetProducts(userId);
+                return Ok(products);
+
             }
-            catch (Exception error)
+            catch (SecurityTokenException)
             {
 
-                throw new Exception($"Não foi possivel encontrar seus produtos, detalhes do erro: {error.Message}");
+                return Unauthorized("Token inválido ou expirado. Faça login novamente.");
+            }
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IAsyncEnumerable<ProductModel>>> GetProductsById(string token, int id)
+        {
+            try
+            {
+                var validateToken = _jwtService.Verify(token);
+
+                int userId = int.Parse(validateToken.Issuer);
+
+                ProductModel product = await _productService.GetProductById(id);
+
+                if (product == null)
+                    return NotFound(new { message = $"Produto com id: {id} não cadastrado" });
+                else
+                    return Ok(product);
+
+            }
+            catch (SecurityTokenException)
+            {
+
+                return Unauthorized("Token inválido ou expirado. Faça login novamente.");
+            }
+        }
+        [HttpGet("/Group/{group}")]
+        public async Task<ActionResult<IAsyncEnumerable<ProductModel>>> GetGroup(string token, string group)
+        {
+            try
+            {
+                var validateToken = _jwtService.Verify(token);
+
+                int userId = int.Parse(validateToken.Issuer);
+
+                IEnumerable<ProductModel> product = await _productService.GetProductsByCategory(group);
+                return Ok(product);
+
+            }
+            catch (SecurityTokenException)
+            {
+
+                return Unauthorized("Token inválido ou expirado. Faça login novamente.");
+            }
+        }
+        [HttpGet("Prices")]
+        public async Task<ActionResult<ProductPricesAndQuantityModel>> GetPurchaseAndSaleAndQuantity(string token)
+        {
+            try
+            {
+                var validateToken = _jwtService.Verify(token);
+
+                int userId = int.Parse(validateToken.Issuer);
+
+                IEnumerable<ProductPricesAndQuantityModel> data = await _productService.GetPurchaseAndSaleAndQuantity();
+                return Ok(data);
+
+            }
+            catch (SecurityTokenException)
+            {
+
+                return Unauthorized("Token inválido ou expirado. Faça login novamente.");
+            }
+        }
+        [HttpGet("Categorys")]
+        public async Task<ActionResult<ProductPricesAndQuantityModel>> GetCategorys(string token)
+        {
+            try
+            {
+                var validateToken = _jwtService.Verify(token);
+
+                int userId = int.Parse(validateToken.Issuer);
+
+                IEnumerable<string> data = await _productService.GetCategory();
+                return Ok(data);
+
+            }
+            catch (SecurityTokenException)
+            {
+
+                return Unauthorized("Token inválido ou expirado. Faça login novamente.");
             }
         }
         [HttpPost]
-        public async Task<ActionResult<ProductModel>> CreateProduct(ProductModel productModel)
+        public async Task<ActionResult<ProductModel>> CreateProduct(string token, ProductModel productModel)
         {
             try
             {
-                string jwt = Request.Cookies["jwt"];
-                var token = _jwtService.Verify(jwt);
-
-                int userId = int.Parse(token.Issuer);
-                if (token != null)
+                if (ModelState.IsValid)
                 {
+                    var validateToken = _jwtService.Verify(token);
+                    int userId = int.Parse(validateToken.Issuer);
                     productModel.UserId = userId;
                     await _productService.CreateProduct(productModel);
                     return Created();
-                } else
-                return BadRequest();
+
+                }
+                else
+                    return Unauthorized();
 
             }
-            catch (Exception error)
+            catch (SecurityTokenException)
             {
 
-                throw new Exception($"Tivemos um problema ao criar seu produto, detalhes do erro: {error.Message}");
+                return BadRequest(new { message = "Usuário não autenticado" });
             }
         }
         [HttpPut]
-        public async Task<ActionResult<ProductModel>> EditProduct(ProductModel productModel)
+        public async Task<ActionResult<ProductModel>> EditProduct(string token, ProductModel productModel)
         {
             try
             {
-                string jwt = Request.Cookies["jwt"];
-                var token = _jwtService.Verify(jwt);
-
-                int userId = int.Parse(token.Issuer);
-                if (token != null)
+                if (ModelState.IsValid)
                 {
+                    var validateToken = _jwtService.Verify(token);
+                    int userId = int.Parse(validateToken.Issuer);
                     productModel.UserId = userId;
-                    ProductModel productDb = await _productService.GetProductById(productModel.Id);
+                    await _productService.UpdateProduct(productModel);
+                    return Ok();
 
-                    productDb.Name = productModel.Name;
-                    productDb.Quantity = productModel.Quantity;
-                    productDb.PurchasePrice = productModel.PurchasePrice;
-                    productDb.SalePrice = productModel.SalePrice;
-                    productDb.WholesaleMinimalQuantity = productModel.WholesaleMinimalQuantity;
-                    productDb.WholesaleUnityPrice = productModel.WholesaleUnityPrice;
-                    productDb.Group = productModel.Group;
-
-                    await _productService.UpdateProduct(productDb);
-
-                    return Created();
-                } else
-                return BadRequest();
+                }
+                else
+                    return Unauthorized();
 
             }
-            catch (Exception error)
+            catch (SecurityTokenException)
             {
-
-                throw new Exception($"Tivemos um problema ao criar seu produto, detalhes do erro: {error.Message}");
+                return BadRequest(new { message = "Usuário não autenticado" });
             }
         }
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteProduct(int id)
+        public async Task<ActionResult> DeleteProduct(string token, int id)
         {
             try
             {
-                if (id != null)
+                if (ModelState.IsValid)
                 {
-                    await _productService.DeleteProduct(id);
-                    return Ok();
-                } else
+                    var validateToken = _jwtService.Verify(token);
+                    int userId = int.Parse(validateToken.Issuer);
+                    if (userId != null)
+                    {
+                        await _productService.DeleteProduct(id);
+                        return Ok();
+                    }
+                    return Unauthorized();
+                }
                 return BadRequest();
             }
-            catch (Exception error)
+            catch (SecurityTokenException)
             {
-
-                throw new Exception($"Tivemos um problema ao apagar seu produto, detalhes do erro: {error.Message}");
+                return BadRequest(new { message = "Usuário não autenticado" });
             }
         }
     }

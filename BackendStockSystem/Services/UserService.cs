@@ -55,5 +55,23 @@ namespace BackendStockSystem.Services
                 throw new Exception($"Falha ao encontrar usuário pelo número de telefone, detalhe do erro: {error.Message}");
             }
         }
+
+        public async Task UpdateStoreNameUser(int id, string storeName)
+        {
+            try
+            {
+                UserModel user = await GetUserById(id);
+
+                user.StoreName = storeName;
+                _context.Entry(user).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception error)
+            {
+
+                throw new Exception($"Houve um erro ao mudar informações do usuário, detalhe do erro: {error.Message}");
+            }
+        }
     }
 }

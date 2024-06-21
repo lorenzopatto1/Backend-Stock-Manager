@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackendStockSystem.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateTableUsersAndProducts : Migration
+    public partial class LinkedProductToUser : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,10 +19,10 @@ namespace BackendStockSystem.Data.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     FirstName = table.Column<string>(type: "text", nullable: false),
-                    LastName = table.Column<string>(type: "text", nullable: false),
+                    LastName = table.Column<string>(type: "text", nullable: true),
                     EmailAddress = table.Column<string>(type: "text", nullable: false),
-                    PhoneNumber = table.Column<int>(type: "integer", nullable: false),
-                    Gender = table.Column<string>(type: "text", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "text", nullable: false),
+                    Gender = table.Column<int>(type: "integer", nullable: false),
                     Password = table.Column<string>(type: "text", nullable: false),
                     RegistrationDate = table.Column<DateOnly>(type: "date", nullable: true)
                 },
@@ -40,25 +40,28 @@ namespace BackendStockSystem.Data.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     Quantity = table.Column<int>(type: "integer", nullable: false),
                     PurchasePrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    Profit = table.Column<decimal>(type: "numeric", nullable: false),
                     SalePrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
-                    UserModelId = table.Column<int>(type: "integer", nullable: true)
+                    WholesaleMinimalQuantity = table.Column<decimal>(type: "numeric", nullable: true),
+                    WholesaleUnityPrice = table.Column<decimal>(type: "numeric", nullable: true),
+                    ValidationDate = table.Column<DateOnly>(type: "date", nullable: true),
+                    Group = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Products_Users_UserModelId",
-                        column: x => x.UserModelId,
+                        name: "FK_Products_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_UserModelId",
+                name: "IX_Products_UserId",
                 table: "Products",
-                column: "UserModelId");
+                column: "UserId");
         }
 
         /// <inheritdoc />

@@ -1,5 +1,6 @@
 ﻿using BackendStockSystem.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace BackendStockSystem.Models
 {
@@ -11,6 +12,8 @@ namespace BackendStockSystem.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FullName => $"{FirstName} {LastName}";
+        [Required(ErrorMessage = "Por favor, insira o nome de sua loja")]
+        public string StoreName { get; set; }
         [Required(ErrorMessage = "Por favor, insira seu e-mail")]
         [EmailAddress(ErrorMessage = "O formato do e-mail está incorreto, corrija-o e tente novamente!")]
         public string EmailAddress { get; set; }
@@ -18,11 +21,11 @@ namespace BackendStockSystem.Models
         public string PhoneNumber { get; set; }
         [Required(ErrorMessage = "Por favor, selecione seu gênero")]
         public GenderEnum? Gender { get; set; }
-        [Required(ErrorMessage = "Por favor, insira sua senha")]
+        [JsonIgnore]
         public string Password { get; set; }
         public DateOnly? RegistrationDate { get; set; }
 
-        public virtual List<ProductModel> Products { get; set; }
+        public virtual IEnumerable<ProductModel>? Products { get; set; }
 
         public Boolean ValidPassword(string password)
         {
