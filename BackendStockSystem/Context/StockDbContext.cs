@@ -14,6 +14,7 @@ namespace BackendStockSystem.Context
 
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<UserModel> Users { get; set; }
+        public DbSet<RelatoryModel> Relatory { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -3,6 +3,7 @@ using System;
 using BackendStockSystem.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackendStockSystem.Data.Migrations
 {
     [DbContext(typeof(StockDbContext))]
-    partial class StockDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240625202105_changeStringProps")]
+    partial class changeStringProps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,14 +115,14 @@ namespace BackendStockSystem.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal?>("BalanceToPay")
-                        .HasColumnType("numeric");
+                    b.Property<int?>("BalanceToPay")
+                        .HasColumnType("integer");
 
                     b.Property<int?>("Change")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("FirstAmountPaid")
-                        .HasColumnType("numeric");
+                    b.Property<int>("FirstAmountPaid")
+                        .HasColumnType("integer");
 
                     b.Property<string>("FirstPayment")
                         .IsRequired()
@@ -129,8 +132,8 @@ namespace BackendStockSystem.Data.Migrations
                         .IsRequired()
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<decimal?>("SecondAmountPaid")
-                        .HasColumnType("numeric");
+                    b.Property<int?>("SecondAmountPaid")
+                        .HasColumnType("integer");
 
                     b.Property<string>("SecondPayment")
                         .HasColumnType("text");

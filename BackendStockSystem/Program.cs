@@ -25,6 +25,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IRelatoryService, RelatoryService>();
 builder.Services.AddScoped<JWTService>();
 
 builder.Services.AddDistributedMemoryCache();
