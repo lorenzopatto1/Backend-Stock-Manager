@@ -5,7 +5,8 @@ namespace BackendStockSystem.Models
     public class ProductSoldModel
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; } 
+        public int ProductId { get; set; }
         [Required(ErrorMessage = "Por favor, coloque o nome")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Por favor, coloque a quantidade")]
