@@ -20,12 +20,13 @@ namespace BackendStockSystem.Services
                 if (userId != null)
                 {
                     var relatory = await _context.Relatory.Where(relatory => relatory.UserId == userId).Include(relatory => relatory.Products).ToListAsync();
-                    if (relatory != null) { 
+                    if (relatory != null)
+                    {
                         return relatory;
                     }
                     throw new Exception("Não existe relatórios");
                 }
-                    throw new Exception("Usuário inexistente");
+                throw new Exception("Usuário inexistente");
             }
             catch (Exception error)
             {
@@ -37,7 +38,15 @@ namespace BackendStockSystem.Services
         {
             try
             {
-                _context.Add(relatory);
+                foreach (var item in relatory.Products)
+                {
+                    var product = _context.Products.FirstOrDefault(productDb => productDb.Id == item.ProductId);
+                    if (product != null)
+                    {
+                        product.Quantity -= item.Quantity;
+                    }
+                }
+                _context.Relatory.Add(relatory);
                 await _context.SaveChangesAsync();
             }
             catch (Exception error)
