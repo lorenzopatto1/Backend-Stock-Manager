@@ -47,11 +47,11 @@ namespace BackendStockSystem.Controllers
                                 SameSite = SameSiteMode.Lax
                             });
 
-                            return Ok(new {message = "Success", token = jwt });
+                            return Ok(new { message = "Success", token = jwt });
                         }
                     }
                 }
-                    return BadRequest(new {message = "Informações inválidas"});
+                return BadRequest(new { message = "Informações inválidas" });
             }
             catch (Exception error)
             {
@@ -66,7 +66,7 @@ namespace BackendStockSystem.Controllers
             return Ok(new { message = "Success" });
         }
         [HttpGet("/User")]
-        public async Task<ActionResult> User(string token )
+        public async Task<ActionResult> GetUser(string token)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace BackendStockSystem.Controllers
 
                 return Ok(user);
             }
-            catch (Exception _)
+            catch (Exception)
             {
 
                 return Unauthorized();

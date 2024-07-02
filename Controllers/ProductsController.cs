@@ -175,7 +175,7 @@ namespace BackendStockSystem.Controllers
                 if (ModelState.IsValid)
                 {
                     var validateToken = _jwtService.Verify(token);
-                    int userId = int.Parse(validateToken.Issuer);
+                    int? userId = int.Parse(validateToken.Issuer);
                     if (userId != null)
                     {
                         await _productService.DeleteProduct(id);

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendStockSystem", "BackendStockSystem\BackendStockSystem.csproj", "{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendStockSystem", "BackendStockSystem.csproj", "{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

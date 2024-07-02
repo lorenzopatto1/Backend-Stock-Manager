@@ -25,8 +25,8 @@ namespace BackendStockSystem.Models
         public string Password { get; set; }
         public DateOnly? RegistrationDate { get; set; }
 
-        public virtual IEnumerable<ProductModel>? Products { get; set; }
-        public virtual IEnumerable<RelatoryModel>? Relatory { get; set; }
+        public virtual IEnumerable<ProductModel> Products { get; set; }
+        public virtual IEnumerable<RelatoryModel> Relatory { get; set; }
 
         public Boolean ValidPassword(string password)
         {
