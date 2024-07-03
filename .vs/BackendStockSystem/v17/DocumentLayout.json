@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -11,6 +12,8 @@
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+=======
+>>>>>>> 53a59ff4c218de33874199034ec77b7290562ed3
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
@@ -22,7 +25,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 2,
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> 53a59ff4c218de33874199034ec77b7290562ed3
           "Children": [
             {
               "$type": "Document",
@@ -44,6 +51,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\appsettings.json",
               "RelativeDocumentMoniker": "BackendStockSystem\\appsettings.json",
@@ -57,6 +65,8 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+=======
+>>>>>>> 53a59ff4c218de33874199034ec77b7290562ed3
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Dockerfile",
               "RelativeDocumentMoniker": "BackendStockSystem\\Dockerfile",
