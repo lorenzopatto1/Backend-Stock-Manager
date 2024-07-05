@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\data\\migrations\\20240705163553_addtypetoproductandtotalcosttorelatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\data\\migrations\\20240705163553_addtypetoproductandtotalcosttorelatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\services\\relatoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\relatoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\enums\\producttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\enums\\producttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\models\\productsoldmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\productsoldmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\models\\relatorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\relatorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +38,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240705163553_addTypeToProductAndTotalCostToRelatory.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Data\\Migrations\\20240705163553_addTypeToProductAndTotalCostToRelatory.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Data\\Migrations\\20240705163553_addTypeToProductAndTotalCostToRelatory.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Data\\Migrations\\20240705163553_addTypeToProductAndTotalCostToRelatory.cs",
+              "RelativeToolTip": "BackendStockSystem\\Data\\Migrations\\20240705163553_addTypeToProductAndTotalCostToRelatory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:35:53.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RelatoryService.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\RelatoryService.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Services\\RelatoryService.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\RelatoryService.cs",
+              "RelativeToolTip": "BackendStockSystem\\Services\\RelatoryService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAADwvywAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:28:32.72Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
-              "RelativeToolTip": "BackendStockSystem\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAASwA8AAABjAAAA",
+              "DocumentIndex": 2,
+              "Title": "RelatoryController.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\RelatoryController.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\RelatoryController.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\RelatoryController.cs",
+              "RelativeToolTip": "BackendStockSystem\\Controllers\\RelatoryController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwDIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T18:24:23.306Z",
+              "WhenOpened": "2024-07-05T16:28:24.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "BackendStockSystem\\appsettings.Production.json",
-              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\appsettings.Production.json",
-              "RelativeToolTip": "BackendStockSystem\\appsettings.Production.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-03T18:23:19.985Z"
+              "DocumentIndex": 5,
+              "Title": "RelatoryModel.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\RelatoryModel.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\RelatoryModel.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\RelatoryModel.cs",
+              "RelativeToolTip": "BackendStockSystem\\Models\\RelatoryModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:21:08.982Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Dockerfile",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Dockerfile",
-              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Dockerfile",
-              "RelativeToolTip": "BackendStockSystem\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-07-03T18:12:11.912Z"
+              "DocumentIndex": 4,
+              "Title": "ProductSoldModel.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\ProductSoldModel.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\ProductSoldModel.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\ProductSoldModel.cs",
+              "RelativeToolTip": "BackendStockSystem\\Models\\ProductSoldModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:18:35.826Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "BackendStockSystem\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Properties\\launchSettings.json",
-              "RelativeToolTip": "BackendStockSystem\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC0AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-03T17:18:26.145Z"
+              "Title": "ProductTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Enums\\ProductTypeEnum.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Enums\\ProductTypeEnum.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Enums\\ProductTypeEnum.cs",
+              "RelativeToolTip": "BackendStockSystem\\Enums\\ProductTypeEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:07:17.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\ProductModel.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\ProductModel.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\ProductModel.cs",
+              "RelativeToolTip": "BackendStockSystem\\Models\\ProductModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:05:26.441Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,4 +1,5 @@
 ﻿using BackendStockSystem.Context;
+using BackendStockSystem.Enums;
 using BackendStockSystem.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -41,7 +42,9 @@ namespace BackendStockSystem.Services
                 foreach (var item in relatory.Products)
                 {
                     var product = _context.Products.FirstOrDefault(productDb => productDb.Id == item.ProductId);
-                    if (product != null)
+                    bool productType = product.Type == ProductTypeEnum.Unity;
+
+                    if (product != null && productType)
                     {
                         product.Quantity -= item.Quantity;
                     }

@@ -1,11 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BackendStockSystem.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace BackendStockSystem.Models
 {
     public class ProductSoldModel
     {
         [Key]
-        public int Id { get; set; } 
+        public int Id { get; set; }
+        [Required(ErrorMessage = "Por favor, coloque o tipo do produto")]
+        public ProductTypeEnum Type { get; set; }
         public int ProductId { get; set; }
         [Required(ErrorMessage = "Por favor, coloque o nome")]
         public string Name { get; set; }

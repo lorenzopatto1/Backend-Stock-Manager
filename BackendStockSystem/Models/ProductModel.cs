@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BackendStockSystem.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace BackendStockSystem.Models
 {
@@ -6,6 +7,8 @@ namespace BackendStockSystem.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Por favor, insira o tipo do produto")]
+        public ProductTypeEnum Type { get; set; }
         [Required(ErrorMessage = "Por favor, insira o nome do produto")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Por favor, insira a quantidade do produto")]
