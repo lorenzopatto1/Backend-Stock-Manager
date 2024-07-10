@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173", "https://frontend-stock-manager.vercel.app") // URL da sua aplicação React
+            builder.WithOrigins("http://localhost:5173", "https://pdvgestaofacil.com.br") // URL da sua aplicação React
                    .AllowAnyHeader()
                    .AllowAnyMethod()
                    .AllowCredentials();

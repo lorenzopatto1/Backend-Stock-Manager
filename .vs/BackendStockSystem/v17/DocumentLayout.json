@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -15,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\LoginController.cs",
@@ -78,12 +78,11 @@
               "RelativeToolTip": "BackendStockSystem\\Controllers\\LoginController.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAArwDcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T18:54:02.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T18:54:02.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Models\\UserModel.cs",
@@ -91,25 +90,24 @@
               "RelativeToolTip": "BackendStockSystem\\Models\\UserModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T18:42:33.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T18:42:33.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "appsettings.Production.json",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\appsettings.Production.json",
               "RelativeDocumentMoniker": "BackendStockSystem\\appsettings.Production.json",
               "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\appsettings.Production.json",
               "RelativeToolTip": "BackendStockSystem\\appsettings.Production.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-07-08T18:11:05.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\appsettings.Development.json",
               "RelativeDocumentMoniker": "BackendStockSystem\\appsettings.Development.json",
@@ -117,25 +115,24 @@
               "RelativeToolTip": "BackendStockSystem\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-08T17:55:34.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T17:55:34.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Program.cs",
               "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Program.cs",
               "RelativeToolTip": "BackendStockSystem\\Program.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFgAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T17:46:22.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Dockerfile",
               "RelativeDocumentMoniker": "BackendStockSystem\\Dockerfile",
@@ -143,12 +140,11 @@
               "RelativeToolTip": "BackendStockSystem\\Dockerfile",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-07-07T18:52:34.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T18:52:34.679Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BackendStockSystem\\Properties\\launchSettings.json",
@@ -156,8 +152,7 @@
               "RelativeToolTip": "BackendStockSystem\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-07T18:18:32.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T18:18:32.431Z"
             },
             {
               "$type": "Document",
