@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173", "https://www.pdvgestaofacil.com.br", "https://pdvgestaofacil.com.br", "pdvgestaofacil.com.br") // URL da sua aplicação React
+            builder.WithOrigins("http://localhost:5173", "https://www.pdvgestaofacil.com.br")
                    .AllowAnyHeader()
                    .AllowAnyMethod()
                    .AllowCredentials();
@@ -105,7 +105,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowReactApp");
 
 app.UseHttpsRedirection();
-
+app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();

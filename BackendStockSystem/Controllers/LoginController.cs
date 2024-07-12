@@ -53,7 +53,7 @@ namespace BackendStockSystem.Controllers
                 }
                 return BadRequest(new { message = "Informações inválidas" });
             }
-            catch (Exception error)
+           catch (Exception error)
             {
 
                 throw new Exception($"Houve um problema ao tentar fazer login, detalhes do erro: {error.Message}");

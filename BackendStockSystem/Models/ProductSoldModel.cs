@@ -16,6 +16,8 @@ namespace BackendStockSystem.Models
         public int Quantity { get; set; }
         [Required(ErrorMessage = "Por favor, coloque o preço do produto")]
         public decimal Price { get; set; }
+        [Required(ErrorMessage = "Por favor, coloque o preço de compra do produto")]
+        public decimal PurchasePrice { get; set; }
         public decimal? WholesalePrice { get; set; }
         public int? WholesaleMinimalQuantity { get; set; }
         [Required(ErrorMessage = "Por favor, coloque informe o valor total da compra")]
