@@ -80,7 +80,7 @@ namespace BackendStockSystem.Services
         {
             try
             {
-                return await _context.Products.Select(product => new ProductPricesAndQuantityModel { PurchasePrice = product.PurchasePrice, SalePrice = product.SalePrice, Quantity = product.Quantity }).ToListAsync();
+                return await _context.Products.Select(product => new ProductPricesAndQuantityModel { Type = product.Type, PurchasePrice = product.PurchasePrice, SalePrice = product.SalePrice, Quantity = product.Quantity }).ToListAsync();
 
             }
             catch (Exception error)

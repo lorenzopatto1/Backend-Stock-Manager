@@ -10,6 +10,8 @@ namespace BackendStockSystem.Models
         [Required(ErrorMessage = "Por favor, coloque o tipo do produto")]
         public ProductTypeEnum Type { get; set; }
         public int ProductId { get; set; }
+        [Required(ErrorMessage = "Por favor, coloque a categoria")]
+        public string Group { get; set; }
         [Required(ErrorMessage = "Por favor, coloque o nome")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Por favor, coloque a quantidade")]
