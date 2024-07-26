@@ -83,8 +83,8 @@ namespace BackendStockSystem.Controllers
                 return Unauthorized();
             }
         }
-        [HttpPut("/User")]
-        public async Task<ActionResult> EditUser(string token, string storeName)
+        [HttpPut("/StoreName")]
+        public async Task<ActionResult> EditUserStoreName(string token, string storeName)
         {
             try
             {
@@ -94,6 +94,29 @@ namespace BackendStockSystem.Controllers
                     int userId = int.Parse(validateToken.Issuer);
 
                     await _userService.UpdateStoreNameUser(userId, storeName);
+                    return Ok();
+
+                }
+                else
+                    return Unauthorized();
+
+            }
+            catch (SecurityTokenException)
+            {
+                return BadRequest(new { message = "Usuário não autenticado" });
+            }
+        }
+        [HttpPut("/User")]
+        public async Task<ActionResult> EditUser(string token, UserModel user)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var validateToken = _jwtService.Verify(token);
+                    int userId = int.Parse(validateToken.Issuer);
+
+                    await _userService.UpdateUser(userId, user);
                     return Ok();
 
                 }

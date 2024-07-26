@@ -23,6 +23,9 @@ namespace BackendStockSystem.Models
         public GenderEnum? Gender { get; set; }
         [JsonIgnore]
         public string Password { get; set; }
+        public decimal CreditFee {  get; set; }
+        public decimal DebitFee {  get; set; }
+        public decimal PixFee {  get; set; }
         public DateOnly? RegistrationDate { get; set; }
 
         public virtual IEnumerable<ProductModel> Products { get; set; }

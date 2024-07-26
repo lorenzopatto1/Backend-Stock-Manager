@@ -72,6 +72,19 @@ namespace BackendStockSystem.Services
 
                 throw new Exception($"Houve um erro ao mudar informações do usuário, detalhe do erro: {error.Message}");
             }
+        } public async Task UpdateUser(int id, UserModel user)
+        {
+            try
+            {
+                _context.Entry(user).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception error)
+            {
+
+                throw new Exception($"Houve um erro ao mudar informações do usuário, detalhe do erro: {error.Message}");
+            }
         }
     }
 }
