@@ -76,6 +76,8 @@ namespace BackendStockSystem.Services
         {
             try
             {
+                UserModel userDb = await GetUserById(id);
+                user.Password = userDb.Password;
                 _context.Entry(user).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
 

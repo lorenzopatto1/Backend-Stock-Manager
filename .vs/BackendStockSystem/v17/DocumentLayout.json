@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,20 +34,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
               "RelativeToolTip": "BackendStockSystem\\Services\\UserService.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAUwE0AAAANAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAIwE4AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-26T17:17:59.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\LoginController.cs",
@@ -68,8 +68,7 @@
               "RelativeToolTip": "BackendStockSystem\\Models\\UserModel.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAgwBsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T16:00:19.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T16:00:19.158Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "RelativeToolTip": "BackendStockSystem\\Controllers\\RelatoryController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAkwCAAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T05:37:25.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T05:37:25.165Z"
             }
           ]
         }
