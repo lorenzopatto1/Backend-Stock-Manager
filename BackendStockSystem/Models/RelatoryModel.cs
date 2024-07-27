@@ -14,7 +14,7 @@ namespace BackendStockSystem.Models
         public string FirstPayment { get; set; }
         [Required(ErrorMessage = "Está faltando o valor pago")]
         public decimal FirstAmountPaid { get; set; }
-        public int? Change { get; set; }
+        public decimal? Change { get; set; }
         public decimal? BalanceToPay { get; set; }
         public string SecondPayment { get; set; }
         public decimal? SecondAmountPaid { get; set; }

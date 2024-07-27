@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Data\\Migrations\\20240727210320_ChangeIntToDecimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BackendStockSystem\\Data\\Migrations\\20240727210320_ChangeIntToDecimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\models\\relatorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\models\\relatorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|solutionrelative:backendstocksystem\\controllers\\relatorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C7FF414-EE0B-40E6-AF24-1AD2734E2201}|BackendStockSystem\\BackendStockSystem.csproj|c:\\users\\loren\\documentos\\backendstocksystem\\backendstocksystem\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,19 +43,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20240727210320_ChangeIntToDecimal.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Data\\Migrations\\20240727210320_ChangeIntToDecimal.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Data\\Migrations\\20240727210320_ChangeIntToDecimal.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Data\\Migrations\\20240727210320_ChangeIntToDecimal.cs",
+              "RelativeToolTip": "BackendStockSystem\\Data\\Migrations\\20240727210320_ChangeIntToDecimal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T21:03:21.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RelatoryModel.cs",
+              "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\RelatoryModel.cs",
+              "RelativeDocumentMoniker": "BackendStockSystem\\Models\\RelatoryModel.cs",
+              "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\RelatoryModel.cs",
+              "RelativeToolTip": "BackendStockSystem\\Models\\RelatoryModel.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T21:02:36.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Services\\UserService.cs",
               "RelativeToolTip": "BackendStockSystem\\Services\\UserService.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAIwE4AAAA5AAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAwE4AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-26T17:17:59.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Controllers\\LoginController.cs",
@@ -55,12 +89,11 @@
               "RelativeToolTip": "BackendStockSystem\\Controllers\\LoginController.cs",
               "ViewState": "AQIAAGMAAAAAAAAAAAAUwHYAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T17:13:32.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T17:13:32.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\loren\\Documentos\\BackendStockSystem\\BackendStockSystem\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "BackendStockSystem\\Models\\UserModel.cs",
@@ -80,7 +113,8 @@
               "RelativeToolTip": "BackendStockSystem\\Controllers\\RelatoryController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAkwCAAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T05:37:25.165Z"
+              "WhenOpened": "2024-07-20T05:37:25.165Z",
+              "EditorCaption": ""
             }
           ]
         }
