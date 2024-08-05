@@ -3,20 +3,20 @@ import IProductsRepository from "../../repositories/IProductsRepository";
 import AppError from "@shared/errors/AppError";
 
 @injectable()
-class DeleteProductService {
+class GetProductById {
   constructor(
     @inject("ProductsRepository")
     private productsRepository: IProductsRepository
   ) {}
-
   async execute(id: string) {
-    const productExists = await this.productsRepository.findById(id);
+    const product = await this.productsRepository.findById(id);
 
-    if (!productExists) {
-      throw new AppError("Não foi possivel encontrar seu produto");
+    if (!product) {
+      throw new AppError("Produto não encontrado");
     }
-    await this.productsRepository.delete(productExists.id);
+
+    return product;
   }
 }
 
-export default DeleteProductService;
+export default GetProductById;
