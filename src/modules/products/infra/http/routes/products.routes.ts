@@ -8,14 +8,25 @@ const productRouter = Router();
 const productsController = new ProductsController();
 
 productRouter.get(
-  "/",
+  "/unique",
   ensureMatrixAuthenticate,
   celebrate({
     [Segments.BODY]: {
       establishmentId: Joi.string().required(),
     },
   }),
-  productsController.read
+  productsController.readById
+);
+
+productRouter.get(
+  "/all",
+  ensureMatrixAuthenticate,
+  celebrate({
+    [Segments.BODY]: {
+      establishmentId: Joi.string().required(),
+    },
+  }),
+  productsController.readByEstablishmentId
 );
 
 productRouter.post(
@@ -36,6 +47,37 @@ productRouter.post(
     },
   }),
   productsController.create
+);
+
+productRouter.put(
+  "/update",
+  ensureMatrixAuthenticate,
+  celebrate({
+    [Segments.BODY]: {
+      id: Joi.string().required(),
+      type: Joi.string(),
+      name: Joi.string(),
+      quantity: Joi.number(),
+      purchasePrice: Joi.number(),
+      salePrice: Joi.number(),
+      wholesaleMinimalQuantity: Joi.number(),
+      wholesaleUnityPrice: Joi.number(),
+      validationDate: Joi.date(),
+      category: Joi.string(),
+    },
+  }),
+  productsController.update
+);
+
+productRouter.delete(
+  "/delete",
+  ensureMatrixAuthenticate,
+  celebrate({
+    [Segments.BODY]: {
+      id: Joi.string().required(),
+    },
+  }),
+  productsController.delete
 );
 
 export default productRouter;

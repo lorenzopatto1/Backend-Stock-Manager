@@ -3,7 +3,7 @@ import IProductsRepository from "../../repositories/IProductsRepository";
 import AppError from "@shared/errors/AppError";
 
 @injectable()
-class GetProductsService {
+class GetProductsByEstablishmentIdService {
   constructor(
     @inject("ProductsRepository")
     private productsRepository: IProductsRepository
@@ -20,4 +20,4 @@ class GetProductsService {
   }
 }
 
-export default GetProductsService;
+export default GetProductsByEstablishmentIdService;
