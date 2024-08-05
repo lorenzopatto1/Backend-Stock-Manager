@@ -1,0 +1,182 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EstablishmentEnum {
+  Unique
+  Network
+}
+
+enum ProductEnum {
+  Unity
+  Mix
+}
+
+enum InOutEnum {
+  In
+  Out
+}
+
+enum GenderEnum {
+  Male
+  Female
+  Other
+}
+
+model Matrix {
+  id             String               @id
+  name           String               @unique
+  email          String               @unique
+  phoneNumber    String               @unique
+  password       String
+  created_At     DateTime             @default(now())
+  establishments Establishment[]
+  refresh_Token  MatrixRefreshToken[]
+
+  @@map("Matrixes")
+}
+
+model MatrixRefreshToken {
+  id         String @id
+  expires_In Int
+  matrix     Matrix @relation(fields: [matrix_Id], references: [id])
+  matrix_Id  String
+
+  @@map("MatrixesRefreshToken")
+}
+
+model Establishment {
+  id            String            @id
+  matrix        Matrix            @relation(fields: [matrix_Id], references: [id])
+  matrix_Id     String
+  type          EstablishmentEnum @default(Unique)
+  name          String
+  phoneNumber   String
+  products      Product[]
+  inOuts        InOut[]
+  plan          Plan?
+  machineFees   MachineFees?
+  functionaries Functionary[]
+  sale          Sale[]
+  created_At    DateTime          @default(now())
+
+  @@map("Establishments")
+}
+
+model Product {
+  id                       String        @id
+  establishment            Establishment @relation(fields: [establishment_Id], references: [id])
+  establishment_Id         String
+  type                     ProductEnum   @default(Unity)
+  name                     String
+  quantity                 Int
+  purchasePrice            Decimal
+  salePrice                Decimal
+  wholesaleMinimalQuantity Decimal?
+  wholesaleUnityPrice      Decimal?
+  validationDate           DateTime?
+  category                 String        @unique
+
+  @@map("Products")
+}
+
+model Sale {
+  id                 String        @id
+  establishment      Establishment @relation(fields: [establishment_Id], references: [id])
+  establishment_Id   String
+  totalSaleValue     Decimal
+  totalPurchaseValue Decimal
+  products           SoldProduct[]
+  firstPayment       Int
+  firstAmountPaid    Decimal
+  secondpayment      Int?
+  secondAmountPaid   Decimal?
+  sellerName         String
+  saleDate           DateTime      @default(now())
+
+  @@map("Sales")
+}
+
+model InOut {
+  id               String        @id
+  establishment    Establishment @relation(fields: [establishment_Id], references: [id])
+  establishment_Id String
+  type             InOutEnum     @default(In)
+  value            Decimal
+  date             DateTime      @default(now())
+  description      String
+
+  @@map("InOuts")
+}
+
+model MachineFees {
+  id               String        @unique
+  establishment    Establishment @relation(fields: [establishment_id], references: [id])
+  establishment_id String        @unique
+  creditfee        Decimal
+  debitfee         Decimal
+  pixfee           Decimal
+}
+
+model Functionary {
+  id               String                   @unique
+  establishment    Establishment            @relation(fields: [establishment_Id], references: [id])
+  establishment_Id String
+  type             String
+  name             String
+  emailAddress     String
+  phoneNumber      String                   @unique
+  password         String
+  gender           GenderEnum
+  document         String
+  refresh_Token    FunctionaryRefreshToken?
+
+  @@map("Functionaries")
+}
+
+model FunctionaryRefreshToken {
+  id             String      @id
+  expires_In     Int
+  functionary    Functionary @relation(fields: [functionary_Id], references: [id])
+  functionary_Id String      @unique
+
+  @@map("FunctionariesRefreshToken")
+}
+
+model Plan {
+  id               String        @unique
+  establishment    Establishment @relation(fields: [establishment_Id], references: [id])
+  establishment_Id String        @unique
+  startDate        DateTime      @default(now())
+  active           Boolean
+
+  @@map("EstablishmentsPlan")
+}
+
+model SoldProduct {
+  id                       String      @id
+  sale_Id                  String
+  sale                     Sale        @relation(fields: [sale_Id], references: [id])
+  product_Id               String
+  type                     ProductEnum
+  name                     String
+  quantity                 Int
+  purchasePrice            Decimal
+  salePrice                Decimal
+  wholesalePrice           Decimal?
+  wholesaleMinimalQuantity Int?
+  total                    Decimal
+
+  @@map("SoldProducts")
+}
