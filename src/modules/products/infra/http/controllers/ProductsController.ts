@@ -2,13 +2,13 @@ import { Request, Response } from "express";
 import { container } from "tsyringe";
 import GetProductsByEstablishmentIdService from "../services/GetProductsByEstablishmentIdService";
 import { instanceToPlain } from "class-transformer";
-import CreateProductService from "../services/CreateProductService";
+import RegisterProductService from "../services/RegisterProductService";
 import UpdateProductService from "../services/UpdateProductService";
 import DeleteProductService from "../services/DeleteProductService";
 import GetProductById from "../services/GetProductById";
 
 class ProductsController {
-  async readById(request: Request, response: Response) {
+  async readUnique(request: Request, response: Response) {
     const { id } = request.body;
 
     const getProduct = container.resolve(GetProductById);
@@ -17,7 +17,7 @@ class ProductsController {
 
     return response.json(instanceToPlain(product));
   }
-  async readByEstablishmentId(request: Request, response: Response) {
+  async readAll(request: Request, response: Response) {
     const { establishmentId } = request.body;
 
     const getProducts = container.resolve(GetProductsByEstablishmentIdService);
@@ -30,7 +30,7 @@ class ProductsController {
   async create(request: Request, response: Response) {
     const product = request.body;
 
-    const createProduct = container.resolve(CreateProductService);
+    const createProduct = container.resolve(RegisterProductService);
 
     const newProduct = await createProduct.execute(product);
 

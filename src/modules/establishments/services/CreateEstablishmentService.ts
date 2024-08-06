@@ -3,12 +3,15 @@ import { inject, injectable } from "tsyringe";
 import IEstablishmentsRepository from "../infra/repositories/IEstablishmentsRepository";
 import { Establishment, EstablishmentEnum } from "@prisma/client";
 import { v4 as uuidv4 } from "uuid";
+import IMachineFeesRepository from "@modules/machineFees/infra/repositories/IMachineFeesRepository";
 
 @injectable()
 class CreateEstablishmentService {
   constructor(
     @inject("EstablishmentRepository")
-    private establishmentRepository: IEstablishmentsRepository
+    private establishmentRepository: IEstablishmentsRepository,
+    @inject("MachineFeesRepository")
+    private machineFeesRepository: IMachineFeesRepository
   ) {}
 
   async execute(establishment: Establishment) {
@@ -41,14 +44,19 @@ class CreateEstablishmentService {
       throw new AppError("Você ja tem um estabelecimento com esse nome");
     }
 
+    const id = uuidv4();
+
     const establishmentData: Establishment = {
       ...establishment,
-      id: uuidv4(),
+      id,
     };
 
     const newEstablishment =
-      this.establishmentRepository.create(establishmentData);
+      await this.establishmentRepository.create(establishmentData);
 
+    await this.machineFeesRepository.create({
+      establishment_Id: id,
+    });
     return newEstablishment;
   }
 }

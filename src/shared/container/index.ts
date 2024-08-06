@@ -12,6 +12,10 @@ import IEstablishmentsRepository from "@modules/establishments/infra/repositorie
 import EstablishmentsRepository from "@modules/establishments/infra/http/prisma/repositories/EstablishmentsRepository";
 import IProductsRepository from "@modules/products/infra/repositories/IProductsRepository";
 import ProductsRepository from "@modules/products/infra/http/prisma/repositories/ProductsRepository";
+import IInOutsRepository from "@modules/inOuts/repositories/IInOutsRepository";
+import InOutsRepository from "@modules/inOuts/infra/http/prisma/repositories/inOutsRepository";
+import MachineFeesRepository from "@modules/machineFees/infra/http/prisma/repositories/MachineFeesRepository";
+import IMachineFeesRepository from "@modules/machineFees/infra/repositories/IMachineFeesRepository";
 
 container.registerSingleton<IMatrixesRepository>(
   "MatrixesRepository",
@@ -36,6 +40,16 @@ container.registerSingleton<IEstablishmentsRepository>(
 container.registerSingleton<IProductsRepository>(
   "ProductsRepository",
   ProductsRepository
+);
+
+container.registerSingleton<IInOutsRepository>(
+  "InOutsRepository",
+  InOutsRepository
+);
+
+container.registerSingleton<IMachineFeesRepository>(
+  "MachineFeesRepository",
+  MachineFeesRepository
 );
 
 container.registerSingleton<IHashProvider>("HashProvider", BCryptHashProvider);

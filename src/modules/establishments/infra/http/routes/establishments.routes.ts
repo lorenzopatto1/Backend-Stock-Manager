@@ -1,7 +1,7 @@
 import { celebrate, Joi, Segments } from "celebrate";
 import { Router } from "express";
 import EstablishmentController from "../controllers/EstablishmentController";
-import ensureMatrixAuthenticate from "@modules/matrixes/infra/http/middlewares/ensureMatrixAuthenticate";
+import ensureMatrixAuthenticate from "@shared/infra/http/middlewares/ensureMatrixAuthenticate";
 
 const establishmentRouter = Router();
 

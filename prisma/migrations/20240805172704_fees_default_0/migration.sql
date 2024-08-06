@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "MachineFees" ALTER COLUMN "creditfee" SET DEFAULT 0,
+ALTER COLUMN "debitfee" SET DEFAULT 0,
+ALTER COLUMN "pixfee" SET DEFAULT 0;

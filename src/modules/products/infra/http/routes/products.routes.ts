@@ -1,5 +1,5 @@
 import { celebrate, Joi, Segments } from "celebrate";
-import ensureMatrixAuthenticate from "@modules/matrixes/infra/http/middlewares/ensureMatrixAuthenticate";
+import ensureMatrixAuthenticate from "@shared/infra/http/middlewares/ensureMatrixAuthenticate";
 import { Router } from "express";
 import ProductsController from "../controllers/ProductsController";
 
@@ -15,7 +15,7 @@ productRouter.get(
       establishmentId: Joi.string().required(),
     },
   }),
-  productsController.readById
+  productsController.readUnique
 );
 
 productRouter.get(
@@ -26,11 +26,11 @@ productRouter.get(
       establishmentId: Joi.string().required(),
     },
   }),
-  productsController.readByEstablishmentId
+  productsController.readAll
 );
 
 productRouter.post(
-  "/create",
+  "/register",
   ensureMatrixAuthenticate,
   celebrate({
     [Segments.BODY]: {

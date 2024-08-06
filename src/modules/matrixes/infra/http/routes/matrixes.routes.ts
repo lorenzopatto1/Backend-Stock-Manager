@@ -1,7 +1,7 @@
 import { celebrate, Joi, Segments } from "celebrate";
 import { Router } from "express";
-import MatrixesController from "../controllers/MatrixController";
-import ensureMatrixAuthenticate from "../middlewares/ensureMatrixAuthenticate";
+import MatrixesController from "../controllers/MatrixesController";
+import ensureMatrixAuthenticate from "../../../../../shared/infra/http/middlewares/ensureMatrixAuthenticate";
 
 const matrixesRouter = Router();
 const matrixesController = new MatrixesController();
