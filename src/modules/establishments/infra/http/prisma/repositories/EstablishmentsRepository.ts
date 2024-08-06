@@ -6,6 +6,9 @@ class EstablishmentsRepository implements IEstablishmentsRepository {
   public async findById(id: string): Promise<Establishment | null> {
     const establishment = await prisma.establishment.findUnique({
       where: { id },
+      include: {
+        machineFees: true,
+      },
     });
 
     return establishment;
@@ -14,6 +17,9 @@ class EstablishmentsRepository implements IEstablishmentsRepository {
   public async findByMatrixId(matrixId: string): Promise<Establishment[]> {
     const establishment = await prisma.establishment.findMany({
       where: { matrix_Id: matrixId },
+      include: {
+        machineFees: true,
+      },
     });
 
     return establishment;

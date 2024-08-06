@@ -122,11 +122,11 @@ model InOut {
 
 model MachineFees {
   id               String        @unique
-  establishment    Establishment @relation(fields: [establishment_id], references: [id])
-  establishment_id String        @unique
-  creditfee        Decimal
-  debitfee         Decimal
-  pixfee           Decimal
+  establishment    Establishment @relation(fields: [establishment_Id], references: [id])
+  establishment_Id String        @unique
+  creditFee        Decimal       @default(0)
+  debitFee         Decimal       @default(0)
+  pixFee           Decimal       @default(0)
 }
 
 model Functionary {

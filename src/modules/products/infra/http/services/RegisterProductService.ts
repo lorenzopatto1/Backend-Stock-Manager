@@ -1,10 +1,10 @@
 import { inject, injectable } from "tsyringe";
 import IProductsRepository from "../../repositories/IProductsRepository";
-import { Product } from "@prisma/client";
+import { Product, ProductEnum } from "@prisma/client";
 import AppError from "@shared/errors/AppError";
 
 @injectable()
-class CreateProductService {
+class RegisterProductService {
   constructor(
     @inject("ProductsRepository")
     private productsRepository: IProductsRepository
@@ -14,6 +14,13 @@ class CreateProductService {
     const productExists = await this.productsRepository.findByName(
       product.name
     );
+
+    if (
+      product.type !== ProductEnum.Unity &&
+      product.type !== ProductEnum.Mix
+    ) {
+      throw new AppError("O tipo deve ser (Unidade/Mix)");
+    }
 
     if (productExists) {
       throw new AppError("Já existe um produto com esse nome");
@@ -25,4 +32,4 @@ class CreateProductService {
   }
 }
 
-export default CreateProductService;
+export default RegisterProductService;
