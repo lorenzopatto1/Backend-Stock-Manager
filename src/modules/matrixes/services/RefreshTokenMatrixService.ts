@@ -1,6 +1,6 @@
 import AppError from "@shared/errors/AppError";
 import { inject, injectable } from "tsyringe";
-import IMatrixesRefreshTokenProvider from "../repositories/IMatrixesRefreshTokenRepository";
+import IMatrixesRefreshTokenRepository from "../repositories/IMatrixesRefreshTokenRepository";
 import IGenerateTokenProvider from "../providers/GenerateMatrixesTokenProvider/models/IGenerateMatrixesTokenProvider";
 import dayjs from "dayjs";
 
@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 class RefreshTokenMatrixService {
   constructor(
     @inject("MatrixesRefreshTokenRepository")
-    private refreshTokenRepository: IMatrixesRefreshTokenProvider,
+    private refreshTokenRepository: IMatrixesRefreshTokenRepository,
 
     @inject("GenerateMatrixesTokenProvider")
     private tokenProvider: IGenerateTokenProvider

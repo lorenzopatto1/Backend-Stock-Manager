@@ -6,7 +6,7 @@ import { instanceToPlain } from "class-transformer";
 import GetMachineFeesByEstablishmentIdService from "../services/GetMachineFeesByEstablishmentIdService";
 
 export default class MachineFeesController {
-  public async red(request: Request, response: Response) {
+  public async read(request: Request, response: Response) {
     const { establishment_Id } = request.body;
 
     const getMachineFees = container.resolve(

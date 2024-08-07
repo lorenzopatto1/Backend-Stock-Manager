@@ -37,7 +37,7 @@ enum GenderEnum {
 model Matrix {
   id             String               @id
   name           String               @unique
-  email          String               @unique
+  emailAddress   String               @unique
   phoneNumber    String               @unique
   password       String
   created_At     DateTime             @default(now())
@@ -135,7 +135,7 @@ model Functionary {
   establishment_Id String
   type             String
   name             String
-  emailAddress     String
+  emailAddress     String                   @unique
   phoneNumber      String                   @unique
   password         String
   gender           GenderEnum
@@ -155,13 +155,13 @@ model FunctionaryRefreshToken {
 }
 
 model Plan {
-  id               String        @unique
-  establishment    Establishment @relation(fields: [establishment_Id], references: [id])
-  establishment_Id String        @unique
-  startDate        DateTime      @default(now())
-  active           Boolean
+  id        String        @unique
+  matrixes  Establishment @relation(fields: [matrix_Id], references: [id])
+  matrix_Id String        @unique
+  startDate DateTime      @default(now())
+  active    Boolean
 
-  @@map("EstablishmentsPlan")
+  @@map("MatrixesPlan")
 }
 
 model SoldProduct {

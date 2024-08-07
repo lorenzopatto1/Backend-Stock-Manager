@@ -16,16 +16,11 @@ export default class MatrixesController {
     return response.json(instanceToPlain(user));
   }
   public async create(request: Request, response: Response) {
-    const { name, email, phoneNumber, password } = request.body;
+    const data = request.body;
 
     const createMatrix = container.resolve(CreateMatrixServices);
 
-    const user = await createMatrix.execute({
-      name,
-      email,
-      phoneNumber,
-      password,
-    });
+    const user = await createMatrix.execute(data);
 
     return response.json(instanceToPlain(user));
   }

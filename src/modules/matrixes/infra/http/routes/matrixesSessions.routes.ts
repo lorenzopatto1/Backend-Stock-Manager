@@ -1,12 +1,12 @@
 import { Router } from "express";
-import SessionsController from "../controllers/SessionsController";
 import { celebrate, Joi, Segments } from "celebrate";
+import SessionsController from "../controllers/SessionsController";
 
-const sessionsRouter = Router();
+const matrixesSessionsRouter = Router();
 
 const sessionsController = new SessionsController();
 
-sessionsRouter.post(
+matrixesSessionsRouter.post(
   "/login",
   celebrate({
     [Segments.BODY]: {
@@ -17,4 +17,4 @@ sessionsRouter.post(
   sessionsController.create
 );
 
-export default sessionsRouter;
+export default matrixesSessionsRouter;
