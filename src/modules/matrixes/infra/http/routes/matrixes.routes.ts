@@ -1,7 +1,7 @@
-import { celebrate, Joi, Segments } from "celebrate";
 import { Router } from "express";
+import { celebrate, Joi, Segments } from "celebrate";
+import ensureMatrixAuthenticate from "@shared/infra/http/middlewares/ensureMatrixAuthenticate";
 import MatrixesController from "../controllers/MatrixesController";
-import ensureMatrixAuthenticate from "../../../../../shared/infra/http/middlewares/ensureMatrixAuthenticate";
 
 const matrixesRouter = Router();
 const matrixesController = new MatrixesController();
@@ -23,7 +23,7 @@ matrixesRouter.post(
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
-      email: Joi.string().required(),
+      emailAddress: Joi.string().required(),
       phoneNumber: Joi.string().required(),
       password: Joi.string().required(),
     },
@@ -37,7 +37,7 @@ matrixesRouter.put(
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
-      email: Joi.string().required(),
+      emailAddress: Joi.string().required(),
       phoneNumber: Joi.string().required(),
       password: Joi.string().required(),
     },

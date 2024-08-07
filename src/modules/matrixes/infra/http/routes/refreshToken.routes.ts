@@ -1,19 +1,19 @@
 import { celebrate, Joi, Segments } from "celebrate";
 import { Router } from "express";
-import RefreshTokenController from "../controllers/RefreshTokenController";
+import MatrixRefreshTokenController from "../controllers/MatrixRefreshTokenController";
 
-const refreshTokenRouter = Router();
+const matrixesRefreshTokenRouter = Router();
 
-const refreshTokenController = new RefreshTokenController();
+const matrixRefreshTokenController = new MatrixRefreshTokenController();
 
-refreshTokenRouter.post(
+matrixesRefreshTokenRouter.post(
   "/create",
   celebrate({
     [Segments.BODY]: {
       refreshToken: Joi.string().required(),
     },
   }),
-  refreshTokenController.create
+  matrixRefreshTokenController.create
 );
 
-export default refreshTokenRouter;
+export default matrixesRefreshTokenRouter;

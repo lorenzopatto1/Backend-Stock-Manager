@@ -15,7 +15,7 @@ machineFeesRouter.get(
       establishment_Id: Joi.string().required(),
     },
   }),
-  machineFeesController.red
+  machineFeesController.read
 );
 
 machineFeesRouter.put(

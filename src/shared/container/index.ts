@@ -16,6 +16,12 @@ import IInOutsRepository from "@modules/inOuts/repositories/IInOutsRepository";
 import InOutsRepository from "@modules/inOuts/infra/http/prisma/repositories/inOutsRepository";
 import MachineFeesRepository from "@modules/machineFees/infra/http/prisma/repositories/MachineFeesRepository";
 import IMachineFeesRepository from "@modules/machineFees/infra/repositories/IMachineFeesRepository";
+import IGenerateFunctionariesTokenProvider from "@modules/functionaries/providers/GenerateFunctionariesTokenProvider/models/IGenerateFunctionariesTokenProvider";
+import IFunctionariesRefreshTokenRepository from "@modules/functionaries/repositories/IFunctionariesRefreshTokenRepository";
+import GenerateFunctionariesTokenProvider from "@modules/functionaries/providers/GenerateFunctionariesTokenProvider/implementations/GenerateFunctionariesTokenProvider";
+import FunctionariesRefreshTokenRepository from "@modules/functionaries/infra/http/prisma/repositories/FunctionariesRefreshTokenRepository";
+import FunctionariesRepository from "@modules/functionaries/infra/http/prisma/repositories/FunctionariesRepository";
+import IFunctionariesRepository from "@modules/functionaries/repositories/IFunctionariesRepository";
 
 container.registerSingleton<IMatrixesRepository>(
   "MatrixesRepository",
@@ -30,6 +36,21 @@ container.registerSingleton<IMatrixesRefreshTokenRepository>(
 container.registerSingleton<IGenerateMatrixesTokenProvider>(
   "GenerateMatrixesTokenProvider",
   GenerateMatrixesTokenProvider
+);
+
+container.registerSingleton<IFunctionariesRepository>(
+  "FunctionariesRepository",
+  FunctionariesRepository
+);
+
+container.registerSingleton<IGenerateFunctionariesTokenProvider>(
+  "GenerateFunctionariesTokenProvider",
+  GenerateFunctionariesTokenProvider
+);
+
+container.registerSingleton<IFunctionariesRefreshTokenRepository>(
+  "FunctionariesRefreshTokenRepository",
+  FunctionariesRefreshTokenRepository
 );
 
 container.registerSingleton<IEstablishmentsRepository>(

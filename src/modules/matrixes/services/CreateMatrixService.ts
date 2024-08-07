@@ -8,7 +8,7 @@ import IHashProvider from "@shared/container/providers/HashProvider/models/IHash
 
 interface ICreateMatrixRequest {
   name: string;
-  email: string;
+  emailAddress: string;
   phoneNumber: string;
   password: string;
 }
@@ -23,18 +23,17 @@ class CreateMatrixService {
     private hashProvider: IHashProvider
   ) {}
 
-  public async execute({
-    name,
-    email,
-    password,
-    phoneNumber,
-  }: ICreateMatrixRequest): Promise<Matrix> {
-    const userEmailAlreadyExists =
-      await this.matrixesRepository.findByEmail(email);
+  public async execute(matrix: Matrix): Promise<Matrix> {
+    const userEmailAlreadyExists = await this.matrixesRepository.findByEmail(
+      matrix.emailAddress
+    );
+
     const userPhoneNumberAlreadyExists =
-      await this.matrixesRepository.findByPhoneNumber(phoneNumber);
-    const userNameAlreadyExists =
-      await this.matrixesRepository.findByName(name);
+      await this.matrixesRepository.findByPhoneNumber(matrix.phoneNumber);
+
+    const userNameAlreadyExists = await this.matrixesRepository.findByName(
+      matrix.name
+    );
 
     if (userNameAlreadyExists) {
       throw new AppError("Já existe um usuário com este nome", 401);
@@ -51,13 +50,13 @@ class CreateMatrixService {
       );
     }
 
-    const hashedPassword = await this.hashProvider.generateHash(password);
+    const hashedPassword = await this.hashProvider.generateHash(
+      matrix.password
+    );
 
     const data: Matrix = {
+      ...matrix,
       id: uuidv4(),
-      name,
-      email,
-      phoneNumber,
       password: hashedPassword,
       created_At: new Date(),
     };

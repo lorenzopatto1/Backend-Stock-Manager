@@ -22,9 +22,9 @@ class MatrixesRepository implements IMatrixesRepository {
     return user;
   }
 
-  public async findByEmail(email: string): Promise<Matrix | null> {
+  public async findByEmail(emailAddress: string): Promise<Matrix | null> {
     const user = await prisma.matrix.findUnique({
-      where: { email },
+      where: { emailAddress },
     });
 
     return user;
@@ -51,7 +51,7 @@ class MatrixesRepository implements IMatrixesRepository {
   public async update(matrix: Matrix): Promise<Matrix> {
     const updatedMatrix = await prisma.matrix.update({
       where: {
-        email: matrix.email,
+        emailAddress: matrix.emailAddress,
       },
       data: {
         ...matrix,
