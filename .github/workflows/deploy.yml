@@ -1,0 +1,33 @@
+name: Deploy to DigitalOcean with Docker Compose
+
+on:
+  push:
+    branches:
+      - Node  # Defina o branch que acionará o deploy
+
+jobs:
+  deploy:
+    name: Deploy to DigitalOcean with Docker Compose
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.8.1
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_DIGITAL }}
+
+    - name: Copy files to DigitalOcean
+      run: |
+        rsync -avz --exclude='.git' --exclude='node_modules' --exclude='*.env' -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.USER }}@${{ secrets.IP }}:/backend-with-node
+
+    - name: Run Docker Compose on DigitalOcean
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} << 'EOF'
+        cd /backend-with-node
+        docker-compose down
+        docker-compose pull
+        docker-compose up -d --build
+        EOF
