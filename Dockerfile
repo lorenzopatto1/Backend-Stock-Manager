@@ -1,6 +1,7 @@
-FROM node:18
+# Etapa 1: Build da aplicação
+FROM node:18 AS builder
 
-WORKDIR /
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -8,8 +9,18 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3333
+RUN npm run build
 
-CMD ["npm", "run", "build"]
+FROM node:18-alpine
 
-CMD ["npm", "run", "production"]
+WORKDIR /app
+
+COPY --from=builder /app/dist ./dist
+# COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package*.json ./
+
+# RUN npm prune --production
+
+EXPOSE 80
+
+CMD ["node", "dist/shared/infra/http/server.js"]
