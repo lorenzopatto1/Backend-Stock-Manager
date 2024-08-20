@@ -18,6 +18,7 @@ interface IAuthenticateMatrixRequest {
 
 interface IAuthenticateMatrixResponse {
   token: string;
+  id: string;
   refreshToken: MatrixRefreshToken;
 }
 
@@ -63,6 +64,7 @@ class AuthenticateMatrixService {
     const refreshToken = await this.refreshTokenRepository.create(user.id);
 
     return {
+      id: user.id,
       token,
       refreshToken,
     };

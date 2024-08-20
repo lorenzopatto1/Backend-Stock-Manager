@@ -14,9 +14,7 @@ class UpdateMatrixService {
     private hashProvider: IHashProvider
   ) {}
   async execute(matrix: Matrix) {
-    const matrixExists = await this.matrixesRepository.findByEmail(
-      matrix.email
-    );
+    const matrixExists = await this.matrixesRepository.findById(matrix.id);
 
     if (!matrixExists) {
       throw new AppError("Faça login para editar informações", 401);
@@ -24,7 +22,7 @@ class UpdateMatrixService {
 
     const matrixesEquals =
       matrix.name === matrixExists.name &&
-      matrix.email === matrixExists.email &&
+      matrix.emailAddress === matrixExists.emailAddress &&
       matrix.phoneNumber === matrixExists.phoneNumber &&
       (await this.hashProvider.compareHash(
         matrix.password,
@@ -34,9 +32,9 @@ class UpdateMatrixService {
     if (matrixesEquals) {
       throw new AppError("Os dados continuam iguais", 401);
     }
-    const hashedPassword = await this.hashProvider.generateHash(
-      matrix.password
-    );
+    const hashedPassword =
+      matrix.password &&
+      (await this.hashProvider.generateHash(matrix.password));
 
     const updatedMatrix = await this.matrixesRepository.update({
       ...matrix,

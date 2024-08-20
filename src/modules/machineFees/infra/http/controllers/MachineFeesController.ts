@@ -7,7 +7,7 @@ import GetMachineFeesByEstablishmentIdService from "../services/GetMachineFeesBy
 
 export default class MachineFeesController {
   public async read(request: Request, response: Response) {
-    const { establishment_Id } = request.body;
+    const { establishment_Id } = request.params;
 
     const getMachineFees = container.resolve(
       GetMachineFeesByEstablishmentIdService

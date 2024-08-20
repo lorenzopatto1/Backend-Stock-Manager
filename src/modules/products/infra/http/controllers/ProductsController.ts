@@ -1,15 +1,15 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-import GetProductsByEstablishmentIdService from "../services/GetProductsByEstablishmentIdService";
+import GetProductsByEstablishmentIdService from "@modules/products/services/GetProductsByEstablishmentIdService";
 import { instanceToPlain } from "class-transformer";
-import RegisterProductService from "../services/RegisterProductService";
-import UpdateProductService from "../services/UpdateProductService";
-import DeleteProductService from "../services/DeleteProductService";
-import GetProductById from "../services/GetProductById";
+import RegisterProductService from "@modules/products/services/RegisterProductService";
+import UpdateProductService from "@modules/products/services/UpdateProductService";
+import DeleteProductService from "@modules/products/services/DeleteProductService";
+import GetProductById from "@modules/products/services/GetProductById";
 
 class ProductsController {
   async readUnique(request: Request, response: Response) {
-    const { id } = request.body;
+    const { id } = request.params;
 
     const getProduct = container.resolve(GetProductById);
 
@@ -18,11 +18,11 @@ class ProductsController {
     return response.json(instanceToPlain(product));
   }
   async readAll(request: Request, response: Response) {
-    const { establishmentId } = request.body;
+    const { establishment_Id } = request.params;
 
     const getProducts = container.resolve(GetProductsByEstablishmentIdService);
 
-    const products = await getProducts.execute(establishmentId);
+    const products = await getProducts.execute(establishment_Id);
 
     return response.json(instanceToPlain(products));
   }
@@ -48,11 +48,11 @@ class ProductsController {
   }
 
   async delete(request: Request, response: Response) {
-    const { productId } = request.body;
+    const { id } = request.params;
 
     const deleteProduct = container.resolve(DeleteProductService);
 
-    await deleteProduct.execute(productId);
+    await deleteProduct.execute(id);
 
     return response.json({ message: "Produto removido com sucesso!" });
   }

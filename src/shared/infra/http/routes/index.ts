@@ -10,6 +10,9 @@ import inOutsRouter from "@modules/inOuts/infra/http/routes/inOuts.routes";
 import machineFeesRouter from "@modules/machineFees/infra/http/routes/machineFees.routes";
 import matrixesRefreshTokenRouter from "@modules/matrixes/infra/http/routes/refreshToken.routes";
 import functionariesRefreshTokenRouter from "@modules/functionaries/infra/http/routes/refreshToken.routes";
+import salesRouter from "@modules/sales/infra/http/routes/sales.routes";
+import categorysRouter from "@modules/products/infra/http/routes/categorys.routes";
+import totalCostAndSaleValuesRouter from "@modules/products/infra/http/routes/totalCostAndSaleValues.routes";
 
 const routes = Router();
 
@@ -22,6 +25,10 @@ routes.use("/functionaries-sessions", functionariesSessionsRouter);
 routes.use("/functionaries/refresh-token", functionariesRefreshTokenRouter);
 
 routes.use("/products", productRouter);
+routes.use("/categorys", categorysRouter);
+routes.use("/total", totalCostAndSaleValuesRouter);
+
+routes.use("/sales", salesRouter);
 
 routes.use("/in-outs", inOutsRouter);
 

@@ -12,7 +12,7 @@ class RegisterMachineFeesService {
 
   public async execute(data: MachineFees): Promise<MachineFees> {
     const machineFeesAlreadyExists =
-      this.machineFeesRepository.findByEstablishmentId(data.establishment_id);
+      this.machineFeesRepository.findByEstablishmentId(data.establishment_Id);
 
     if (!machineFeesAlreadyExists) {
       throw new AppError(

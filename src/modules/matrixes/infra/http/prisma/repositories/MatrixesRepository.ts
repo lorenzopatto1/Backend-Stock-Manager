@@ -1,4 +1,4 @@
-import { prisma } from "../../../../../../database";
+import { prisma } from "database";
 import IMatrixesRepository from "../../../../repositories/IMatrixesRepository";
 import { Matrix } from "@prisma/client";
 
@@ -51,7 +51,7 @@ class MatrixesRepository implements IMatrixesRepository {
   public async update(matrix: Matrix): Promise<Matrix> {
     const updatedMatrix = await prisma.matrix.update({
       where: {
-        emailAddress: matrix.emailAddress,
+        id: matrix.id,
       },
       data: {
         ...matrix,

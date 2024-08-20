@@ -8,10 +8,10 @@ const inOutsRouter = Router();
 const inOutsController = new InOutsController();
 
 inOutsRouter.get(
-  "/unique",
+  "/unique/:id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
+    [Segments.PARAMS]: {
       id: Joi.string().required(),
     },
   }),
@@ -19,11 +19,11 @@ inOutsRouter.get(
 );
 
 inOutsRouter.get(
-  "/all",
+  "/all/:establishment_Id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
-      establishmentId: Joi.string().required(),
+    [Segments.PARAMS]: {
+      establishment_Id: Joi.string().required(),
     },
   }),
   inOutsController.readAll
@@ -37,7 +37,7 @@ inOutsRouter.post(
       establishment_Id: Joi.string().required(),
       type: Joi.string().required(),
       value: Joi.number().required(),
-      date: Joi.date(),
+      date: Joi.date().required(),
       description: Joi.string().required(),
     },
   }),
@@ -60,10 +60,10 @@ inOutsRouter.put(
 );
 
 inOutsRouter.delete(
-  "/delete",
+  "/delete/:id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
+    [Segments.PARAMS]: {
       id: Joi.string().required(),
     },
   }),

@@ -2,11 +2,11 @@ import { Prisma, Product } from "@prisma/client";
 import { prisma } from "database";
 import { v4 as uuidv4 } from "uuid";
 
-import IProductsRepository from "@modules/products/infra/repositories/IProductsRepository";
+import IProductsRepository from "@modules/products/repositories/IProductsRepository";
 
 class ProductsRepository implements IProductsRepository {
   public async findById(id: string): Promise<Product | null> {
-    const product = await prisma.product.findFirst({
+    const product = await prisma.product.findUnique({
       where: {
         id,
       },

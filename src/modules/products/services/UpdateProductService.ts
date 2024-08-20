@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import IProductsRepository from "../../repositories/IProductsRepository";
+import IProductsRepository from "../repositories/IProductsRepository";
 import { Product } from "@prisma/client";
 import AppError from "@shared/errors/AppError";
 

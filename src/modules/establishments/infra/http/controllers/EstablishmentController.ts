@@ -8,21 +8,28 @@ import { container } from "tsyringe";
 
 export default class EstablishmentController {
   public async read(request: Request, response: Response) {
-    const { matrixId } = request.body;
+    const { matrix_Id } = request.params;
 
     const getEstablishment = container.resolve(GetEstablishmentService);
 
-    const establishments = await getEstablishment.execute(matrixId);
+    const establishments = await getEstablishment.execute(matrix_Id);
 
     return response.json(instanceToPlain(establishments));
   }
 
   public async create(request: Request, response: Response) {
     const establishment = request.body;
+    const { id } = request.matrix;
+
+    const newEstablishmentData = {
+      ...establishment,
+      matrix_Id: id,
+    };
 
     const createEstablishment = container.resolve(CreateEstablishmentService);
 
-    const newEstablishment = await createEstablishment.execute(establishment);
+    const newEstablishment =
+      await createEstablishment.execute(newEstablishmentData);
 
     return response.json(instanceToPlain(newEstablishment));
   }

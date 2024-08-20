@@ -29,13 +29,14 @@ class CreateEstablishmentService {
 
       if (changeEstablishmentType) {
         await this.establishmentRepository.update({
-          ...changeEstablishmentType,
+          id: changeEstablishmentType.id,
           type: EstablishmentEnum.Network,
         });
       }
 
       establishment.type = EstablishmentEnum.Network;
     }
+
     const establishmentNameExists = establishmentExists?.find(
       (establishmentDb) => establishmentDb.name === establishment.name
     );
@@ -44,18 +45,16 @@ class CreateEstablishmentService {
       throw new AppError("Você ja tem um estabelecimento com esse nome");
     }
 
-    const id = uuidv4();
-
     const establishmentData: Establishment = {
       ...establishment,
-      id,
+      id: uuidv4(),
     };
 
     const newEstablishment =
       await this.establishmentRepository.create(establishmentData);
 
     await this.machineFeesRepository.create({
-      establishment_Id: id,
+      establishment_Id: newEstablishment.id,
     });
     return newEstablishment;
   }

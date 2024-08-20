@@ -8,10 +8,10 @@ const functionariesRouter = Router();
 const functionariesController = new FunctionariesController();
 
 functionariesRouter.get(
-  "/",
+  "/:id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
+    [Segments.PARAMS]: {
       id: Joi.string().required(),
     },
   }),

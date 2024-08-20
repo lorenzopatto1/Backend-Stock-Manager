@@ -41,7 +41,7 @@ class DeleteEstablishmentService {
 
       if (changeEstablishmentType) {
         await this.establishmentRepository.update({
-          ...changeEstablishmentType,
+          id: changeEstablishmentType.id,
           type: EstablishmentEnum.Unique,
         });
       }

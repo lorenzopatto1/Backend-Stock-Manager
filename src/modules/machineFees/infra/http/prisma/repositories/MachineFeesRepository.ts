@@ -3,14 +3,13 @@ import { MachineFees } from "@prisma/client";
 import { v4 as uuidv4 } from "uuid";
 
 import IMachineFeesRepository from "@modules/machineFees/infra/repositories/IMachineFeesRepository";
-import { Decimal } from "@prisma/client/runtime/library";
 
 export interface IMachineFeesProps {
   id?: string;
   establishment_Id: string;
-  creditFee?: Decimal;
-  debitFee?: Decimal;
-  pixFee?: Decimal;
+  creditFee?: number;
+  debitFee?: number;
+  pixFee?: number;
 }
 
 class MachineFeesRepository implements IMachineFeesRepository {
@@ -22,10 +21,10 @@ class MachineFeesRepository implements IMachineFeesRepository {
     return machineFees;
   }
   public async findByEstablishmentId(
-    establishmentId: string
+    establishment_Id: string
   ): Promise<MachineFees | null> {
     const machineFees = await prisma.machineFees.findFirst({
-      where: { establishment_Id: establishmentId },
+      where: { establishment_Id: establishment_Id },
     });
 
     return machineFees;
