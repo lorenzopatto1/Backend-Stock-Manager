@@ -5,13 +5,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN chown -R deploy /app
-
-USER deploy
-
 RUN npm install
 
-COPY --chown=deploy . .
+COPY . .
 
 RUN npm run build
 
@@ -20,8 +16,6 @@ FROM node:18-alpine
 WORKDIR /app
 
 COPY --from=builder /app /app
-
-USER deploy
 
 # RUN npm prune --production
 
