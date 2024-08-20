@@ -5,13 +5,13 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN chown -R deploy:deploy /app
+RUN chown -R deploy /app
 
 USER deploy
 
 RUN npm install
 
-COPY --chown=deploy:deploy . .
+COPY --chown=deploy . .
 
 RUN npm run build
 
