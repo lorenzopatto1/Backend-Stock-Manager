@@ -7,7 +7,7 @@ import UpdateMatrixService from "@modules/matrixes/services/UpdateMatrixService"
 
 export default class MatrixesController {
   public async read(request: Request, response: Response) {
-    const { id } = request.body;
+    const { id } = request.matrix;
 
     const getMatrix = container.resolve(GetMatrixServices);
 
@@ -27,9 +27,15 @@ export default class MatrixesController {
 
   public async update(request: Request, response: Response) {
     const matrix = request.body;
+    const { id } = request.matrix;
+
+    const matrixData = {
+      ...matrix,
+      id,
+    };
 
     const updateMatrix = container.resolve(UpdateMatrixService);
-    const updatedMatrix = await updateMatrix.execute(matrix);
+    const updatedMatrix = await updateMatrix.execute(matrixData);
 
     response.json(instanceToPlain(updatedMatrix));
   }

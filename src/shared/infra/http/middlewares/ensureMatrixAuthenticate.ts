@@ -3,6 +3,12 @@ import AppError from "@shared/errors/AppError";
 import { verify } from "jsonwebtoken";
 import { NextFunction, Request, Response } from "express";
 
+interface IToken {
+  iat: number;
+  exp: number;
+  sub: string;
+}
+
 export default function ensureMatrixAuthenticate(
   request: Request,
   response: Response,
@@ -15,12 +21,14 @@ export default function ensureMatrixAuthenticate(
   }
 
   const [, token] = authToken.split(" ");
-
   try {
-    verify(token, authConfig.matrixJwt.secret);
+    const decoded = verify(token, authConfig.matrixJwt.secret);
+
+    const { sub } = decoded as IToken;
+    request.matrix = { id: sub };
 
     return next();
-  } catch {
+  } catch (error: any) {
     throw new AppError("Você não tem autorização para acessar essa rota", 401);
   }
 }

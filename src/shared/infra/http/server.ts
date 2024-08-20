@@ -1,3 +1,4 @@
+import "dotenv/config";
 import "express-async-errors";
 import { errors } from "celebrate";
 import "es6-shim";
@@ -15,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://pdvgestaofacil.com.br"],
     credentials: true,
   })
 );

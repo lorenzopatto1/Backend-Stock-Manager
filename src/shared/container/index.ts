@@ -10,7 +10,7 @@ import GenerateMatrixesTokenProvider from "@modules/matrixes/providers/GenerateM
 import IGenerateMatrixesTokenProvider from "@modules/matrixes/providers/GenerateMatrixesTokenProvider/models/IGenerateMatrixesTokenProvider";
 import IEstablishmentsRepository from "@modules/establishments/infra/repositories/IEstablishmentsRepository";
 import EstablishmentsRepository from "@modules/establishments/infra/http/prisma/repositories/EstablishmentsRepository";
-import IProductsRepository from "@modules/products/infra/repositories/IProductsRepository";
+import IProductsRepository from "@modules/products/repositories/IProductsRepository";
 import ProductsRepository from "@modules/products/infra/http/prisma/repositories/ProductsRepository";
 import IInOutsRepository from "@modules/inOuts/repositories/IInOutsRepository";
 import InOutsRepository from "@modules/inOuts/infra/http/prisma/repositories/inOutsRepository";
@@ -22,6 +22,8 @@ import GenerateFunctionariesTokenProvider from "@modules/functionaries/providers
 import FunctionariesRefreshTokenRepository from "@modules/functionaries/infra/http/prisma/repositories/FunctionariesRefreshTokenRepository";
 import FunctionariesRepository from "@modules/functionaries/infra/http/prisma/repositories/FunctionariesRepository";
 import IFunctionariesRepository from "@modules/functionaries/repositories/IFunctionariesRepository";
+import ISalesRepository from "@modules/sales/repositories/ISalesRepository";
+import SalesRepository from "@modules/sales/infra/http/prisma/repositories/SalesRepository";
 
 container.registerSingleton<IMatrixesRepository>(
   "MatrixesRepository",
@@ -71,6 +73,11 @@ container.registerSingleton<IInOutsRepository>(
 container.registerSingleton<IMachineFeesRepository>(
   "MachineFeesRepository",
   MachineFeesRepository
+);
+
+container.registerSingleton<ISalesRepository>(
+  "SalesRepository",
+  SalesRepository
 );
 
 container.registerSingleton<IHashProvider>("HashProvider", BCryptHashProvider);

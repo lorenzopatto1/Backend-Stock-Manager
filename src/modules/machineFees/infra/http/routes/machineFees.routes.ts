@@ -8,10 +8,10 @@ const machineFeesRouter = Router();
 const machineFeesController = new MachineFeesController();
 
 machineFeesRouter.get(
-  "/",
+  "/:establishment_Id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
+    [Segments.PARAMS]: {
       establishment_Id: Joi.string().required(),
     },
   }),
@@ -24,6 +24,7 @@ machineFeesRouter.put(
   celebrate({
     [Segments.BODY]: {
       id: Joi.string().required(),
+      establishment_Id: Joi.string().required(),
       creditFee: Joi.number(),
       debitFee: Joi.number(),
       pixFee: Joi.number(),

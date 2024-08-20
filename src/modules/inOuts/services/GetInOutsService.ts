@@ -13,7 +13,7 @@ class GetInOutsService {
   public async execute(id: string): Promise<InOut[]> {
     const inOuts = await this.inOutsRepository.findByEstablishmentId(id);
 
-    if (inOuts.length < 1) {
+    if (!inOuts) {
       throw new AppError("Você não tem entradas/saidas registradas");
     }
 

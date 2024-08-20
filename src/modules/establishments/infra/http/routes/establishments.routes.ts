@@ -8,11 +8,11 @@ const establishmentRouter = Router();
 const establishmentController = new EstablishmentController();
 
 establishmentRouter.get(
-  "/",
+  "/:matrix_Id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
-      matrixId: Joi.string().required(),
+    [Segments.PARAMS]: {
+      matrix_Id: Joi.string().required(),
     },
   }),
   establishmentController.read
@@ -23,7 +23,6 @@ establishmentRouter.post(
   ensureMatrixAuthenticate,
   celebrate({
     [Segments.BODY]: {
-      matrix_Id: Joi.string().required(),
       name: Joi.string().required(),
       phoneNumber: Joi.string().required(),
     },

@@ -2,7 +2,7 @@ import AuthenticateMatrixService from "../../../services/AuthenticateMatrixServi
 import { Request, Response } from "express";
 import { container } from "tsyringe";
 
-export default class FunctionarySessionsController {
+export default class MatrixSessionsController {
   public async create(request: Request, response: Response): Promise<Response> {
     const { email, password } = request.body;
 

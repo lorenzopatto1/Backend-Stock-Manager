@@ -7,7 +7,7 @@ import UpdateFunctionaryService from "@modules/functionaries/services/UpdateFunc
 
 export default class FunctionariesController {
   public async read(request: Request, response: Response) {
-    const { id } = request.body;
+    const { id } = request.params;
 
     const getFunctionary = container.resolve(GetFunctionaryService);
 

@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import IProductsRepository from "../../repositories/IProductsRepository";
+import IProductsRepository from "../repositories/IProductsRepository";
 import AppError from "@shared/errors/AppError";
 
 @injectable()
@@ -12,7 +12,7 @@ class GetProductsByEstablishmentIdService {
     const products =
       await this.productsRepository.findByEstablishmentId(establishmentId);
 
-    if (products.length < 1) {
+    if (!products) {
       throw new AppError("Você não tem produtos cadastrados");
     }
 

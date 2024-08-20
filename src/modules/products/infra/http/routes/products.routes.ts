@@ -8,22 +8,22 @@ const productRouter = Router();
 const productsController = new ProductsController();
 
 productRouter.get(
-  "/unique",
+  "/unique/:id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
-      establishmentId: Joi.string().required(),
+    [Segments.PARAMS]: {
+      id: Joi.string().required(),
     },
   }),
   productsController.readUnique
 );
 
 productRouter.get(
-  "/all",
+  "/all/:establishment_Id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
-      establishmentId: Joi.string().required(),
+    [Segments.PARAMS]: {
+      establishment_Id: Joi.string().required(),
     },
   }),
   productsController.readAll
@@ -40,9 +40,9 @@ productRouter.post(
       quantity: Joi.number().required(),
       purchasePrice: Joi.number().required(),
       salePrice: Joi.number().required(),
-      wholesaleMinimalQuantity: Joi.number(),
-      wholesaleUnityPrice: Joi.number(),
-      validationDate: Joi.date(),
+      wholesaleMinimalQuantity: Joi.number().allow(null),
+      wholesaleUnityPrice: Joi.number().allow(null),
+      validationDate: Joi.date().allow(null),
       category: Joi.string().required(),
     },
   }),
@@ -60,9 +60,9 @@ productRouter.put(
       quantity: Joi.number(),
       purchasePrice: Joi.number(),
       salePrice: Joi.number(),
-      wholesaleMinimalQuantity: Joi.number(),
-      wholesaleUnityPrice: Joi.number(),
-      validationDate: Joi.date(),
+      wholesaleMinimalQuantity: Joi.number().allow(null),
+      wholesaleUnityPrice: Joi.number().allow(null),
+      validationDate: Joi.date().allow(null),
       category: Joi.string(),
     },
   }),
@@ -70,10 +70,10 @@ productRouter.put(
 );
 
 productRouter.delete(
-  "/delete",
+  "/delete/:id",
   ensureMatrixAuthenticate,
   celebrate({
-    [Segments.BODY]: {
+    [Segments.PARAMS]: {
       id: Joi.string().required(),
     },
   }),

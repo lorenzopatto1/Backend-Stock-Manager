@@ -3,6 +3,12 @@ import AppError from "@shared/errors/AppError";
 import { verify } from "jsonwebtoken";
 import { NextFunction, Request, Response } from "express";
 
+interface IToken {
+  iat: number;
+  exp: number;
+  sub: string;
+}
+
 export default function ensureFunctionaryAuthenticate(
   request: Request,
   response: Response,
@@ -17,7 +23,9 @@ export default function ensureFunctionaryAuthenticate(
   const [, token] = authToken.split(" ");
 
   try {
-    verify(token, authConfig.functionaryJwt.secret);
+    const decoded = verify(token, authConfig.functionaryJwt.secret);
+    const { sub } = decoded as IToken;
+    request.functionary = { id: sub };
 
     return next();
   } catch {

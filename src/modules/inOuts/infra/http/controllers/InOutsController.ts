@@ -9,7 +9,7 @@ import { container } from "tsyringe";
 
 export default class InOutsController {
   async readUnique(request: Request, response: Response) {
-    const { id } = request.body;
+    const { id } = request.params;
 
     const getInOut = container.resolve(GetInOutService);
 
@@ -19,11 +19,11 @@ export default class InOutsController {
   }
 
   async readAll(request: Request, response: Response) {
-    const { establishmentId } = request.body;
+    const { establishment_Id } = request.params;
 
     const getInOuts = container.resolve(GetInOutsService);
 
-    const inOuts = await getInOuts.execute(establishmentId);
+    const inOuts = await getInOuts.execute(establishment_Id);
 
     return response.json(instanceToPlain(inOuts));
   }
@@ -49,10 +49,12 @@ export default class InOutsController {
   }
 
   async delete(request: Request, response: Response) {
-    const { id } = request.body;
+    const { id } = request.params;
 
     const deleteInOut = container.resolve(DeleteInOutService);
 
     await deleteInOut.execute(id);
+
+    return response.json({ message: "Entrada/Saída removido com sucesso!" });
   }
 }

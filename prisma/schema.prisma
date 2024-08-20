@@ -34,6 +34,11 @@ enum GenderEnum {
   Other
 }
 
+enum Plans {
+  Free
+  Premium
+}
+
 model Matrix {
   id             String               @id
   name           String               @unique
@@ -81,27 +86,31 @@ model Product {
   type                     ProductEnum   @default(Unity)
   name                     String
   quantity                 Int
-  purchasePrice            Decimal
-  salePrice                Decimal
-  wholesaleMinimalQuantity Decimal?
-  wholesaleUnityPrice      Decimal?
+  purchasePrice            Float
+  salePrice                Float
+  wholesaleMinimalQuantity Float?
+  wholesaleUnityPrice      Float?
   validationDate           DateTime?
-  category                 String        @unique
+  category                 String
 
   @@map("Products")
 }
+
+// colocar o vendedor (functionary | matrix)
 
 model Sale {
   id                 String        @id
   establishment      Establishment @relation(fields: [establishment_Id], references: [id])
   establishment_Id   String
-  totalSaleValue     Decimal
-  totalPurchaseValue Decimal
+  change             Float?
+  balanceToPay       Float?
+  totalSaleValue     Float
+  totalPurchaseValue Float
   products           SoldProduct[]
-  firstPayment       Int
-  firstAmountPaid    Decimal
-  secondpayment      Int?
-  secondAmountPaid   Decimal?
+  firstPayment       String
+  firstAmountPaid    Float
+  secondPayment      Int?
+  secondAmountPaid   Float?
   sellerName         String
   saleDate           DateTime      @default(now())
 
@@ -113,7 +122,7 @@ model InOut {
   establishment    Establishment @relation(fields: [establishment_Id], references: [id])
   establishment_Id String
   type             InOutEnum     @default(In)
-  value            Decimal
+  value            Float
   date             DateTime      @default(now())
   description      String
 
@@ -124,9 +133,9 @@ model MachineFees {
   id               String        @unique
   establishment    Establishment @relation(fields: [establishment_Id], references: [id])
   establishment_Id String        @unique
-  creditFee        Decimal       @default(0)
-  debitFee         Decimal       @default(0)
-  pixFee           Decimal       @default(0)
+  creditFee        Float         @default(0)
+  debitFee         Float         @default(0)
+  pixFee           Float         @default(0)
 }
 
 model Functionary {
@@ -165,18 +174,17 @@ model Plan {
 }
 
 model SoldProduct {
-  id                       String      @id
-  sale_Id                  String
-  sale                     Sale        @relation(fields: [sale_Id], references: [id])
-  product_Id               String
-  type                     ProductEnum
-  name                     String
-  quantity                 Int
-  purchasePrice            Decimal
-  salePrice                Decimal
-  wholesalePrice           Decimal?
-  wholesaleMinimalQuantity Int?
-  total                    Decimal
+  id            String      @id
+  sale_Id       String
+  sale          Sale        @relation(fields: [sale_Id], references: [id])
+  product_Id    String
+  type          ProductEnum
+  name          String
+  category      String
+  quantity      Int
+  purchasePrice Float
+  salePrice     Float
+  total         Float
 
   @@map("SoldProducts")
 }

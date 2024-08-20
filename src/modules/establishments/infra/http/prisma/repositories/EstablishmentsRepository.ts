@@ -1,4 +1,6 @@
-import IEstablishmentsRepository from "@modules/establishments/infra/repositories/IEstablishmentsRepository";
+import IEstablishmentsRepository, {
+  IEstablishmentUpdate,
+} from "@modules/establishments/infra/repositories/IEstablishmentsRepository";
 import { Establishment } from "@prisma/client";
 import { prisma } from "database";
 
@@ -19,6 +21,9 @@ class EstablishmentsRepository implements IEstablishmentsRepository {
       where: { matrix_Id: matrixId },
       include: {
         machineFees: true,
+        products: true,
+        inOuts: true,
+        sale: true,
       },
     });
 
@@ -34,7 +39,9 @@ class EstablishmentsRepository implements IEstablishmentsRepository {
     return newEstablishment;
   }
 
-  public async update(establishment: Establishment): Promise<Establishment> {
+  public async update(
+    establishment: IEstablishmentUpdate
+  ): Promise<Establishment> {
     const updatedEstablishment = await prisma.establishment.update({
       where: {
         id: establishment.id,

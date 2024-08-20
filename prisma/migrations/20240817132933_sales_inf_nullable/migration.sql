@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Sales" ALTER COLUMN "balanceToPay" DROP NOT NULL,
+ALTER COLUMN "change" DROP NOT NULL;
