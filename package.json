@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "production": "node ./dist/shared/infra/http/server.js",
+    "production": "pm2  ./dist/shared/infra/http/server.js",
     "build": "tsc && tsc-alias",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only  --ignore-watch node_modules src/shared/infra/http/server.ts"
   },
