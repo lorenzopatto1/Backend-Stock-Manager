@@ -19,6 +19,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Setup SSH
+        uses:
+          webfactory/ssh-agent@v0.8.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_DIGITAL }}
+
       - name: Deploy
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} << 'EOF'
