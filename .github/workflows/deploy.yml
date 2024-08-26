@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy
         run: |
-          sshpass -p ${{ secrets.SSH_PRIVATE_KEY_DIGITAL }} ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} << EOF
+          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} << 'EOF'
             cd /app
             git pull origin Node
             npm install
