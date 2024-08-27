@@ -10,7 +10,7 @@ class GetCategorysService {
 
     const products = await getProducts.execute(establishment_Id);
 
-    const categorys = products.map((product) => product.category);
+    const categorys = [...new Set(products.map((product) => product.category))];
 
     if (!categorys) {
       throw new AppError("Não encontramos suas categorias");
