@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://pdvgestaofacil.com.br"],
+    origin: ["http://localhost:3000", "https://www.pdvgestaofacil.com.br"],
     credentials: true,
   })
 );
