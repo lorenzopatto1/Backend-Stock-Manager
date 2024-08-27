@@ -13,12 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const tsyringe_1 = require("tsyringe");
-const GetProductsByEstablishmentIdService_1 = __importDefault(require("@modules/products/services/GetProductsByEstablishmentIdService"));
+const GetProductsByEstablishmentIdService_1 = __importDefault(require("../../../../products/services/GetProductsByEstablishmentIdService"));
 const class_transformer_1 = require("class-transformer");
-const RegisterProductService_1 = __importDefault(require("@modules/products/services/RegisterProductService"));
-const UpdateProductService_1 = __importDefault(require("@modules/products/services/UpdateProductService"));
-const DeleteProductService_1 = __importDefault(require("@modules/products/services/DeleteProductService"));
-const GetProductById_1 = __importDefault(require("@modules/products/services/GetProductById"));
+const RegisterProductService_1 = __importDefault(require("../../../../products/services/RegisterProductService"));
+const UpdateProductService_1 = __importDefault(require("../../../../products/services/UpdateProductService"));
+const DeleteProductService_1 = __importDefault(require("../../../../products/services/DeleteProductService"));
+const GetProductById_1 = __importDefault(require("../../../../products/services/GetProductById"));
 class ProductsController {
     readUnique(request, response) {
         return __awaiter(this, void 0, void 0, function* () {

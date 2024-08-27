@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const database_1 = require("database");
+const database_1 = require("../../../../../../database");
 const uuid_1 = require("uuid");
 class SalesRepository {
     findById(id) {

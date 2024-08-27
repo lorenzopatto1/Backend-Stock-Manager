@@ -12,8 +12,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const AppError_1 = __importDefault(require("@shared/errors/AppError"));
-const database_1 = require("database");
+const AppError_1 = __importDefault(require("../../../../../../shared/errors/AppError"));
+const database_1 = require("../../../../../../database");
 const dayjs_1 = __importDefault(require("dayjs"));
 const uuid_1 = require("uuid");
 class FunctionariesRefreshTokenRepository {

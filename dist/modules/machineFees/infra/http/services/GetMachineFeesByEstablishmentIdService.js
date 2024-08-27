@@ -25,7 +25,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const tsyringe_1 = require("tsyringe");
-const AppError_1 = __importDefault(require("@shared/errors/AppError"));
+const AppError_1 = __importDefault(require("../../../../../shared/errors/AppError"));
 let GetMachineFeesByEstablishmentIdService = class GetMachineFeesByEstablishmentIdService {
     constructor(machineFeesRepository) {
         this.machineFeesRepository = machineFeesRepository;

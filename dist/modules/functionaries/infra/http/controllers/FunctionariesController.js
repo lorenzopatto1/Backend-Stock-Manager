@@ -16,7 +16,7 @@ const tsyringe_1 = require("tsyringe");
 const class_transformer_1 = require("class-transformer");
 const GetFunctionaryService_1 = __importDefault(require("../../../services/GetFunctionaryService"));
 const CreateFunctionaryService_1 = __importDefault(require("../../../services/CreateFunctionaryService"));
-const UpdateFunctionaryService_1 = __importDefault(require("@modules/functionaries/services/UpdateFunctionaryService"));
+const UpdateFunctionaryService_1 = __importDefault(require("../../../../functionaries/services/UpdateFunctionaryService"));
 class FunctionariesController {
     read(request, response) {
         return __awaiter(this, void 0, void 0, function* () {

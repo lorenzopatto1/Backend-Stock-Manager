@@ -12,11 +12,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const DeleteInOutService_1 = __importDefault(require("@modules/inOuts/services/DeleteInOutService"));
-const GetInOutService_1 = __importDefault(require("@modules/inOuts/services/GetInOutService"));
-const GetInOutsService_1 = __importDefault(require("@modules/inOuts/services/GetInOutsService"));
-const RegisterInOutsService_1 = __importDefault(require("@modules/inOuts/services/RegisterInOutsService"));
-const UpdateInOutService_1 = __importDefault(require("@modules/inOuts/services/UpdateInOutService"));
+const DeleteInOutService_1 = __importDefault(require("../../../../inOuts/services/DeleteInOutService"));
+const GetInOutService_1 = __importDefault(require("../../../../inOuts/services/GetInOutService"));
+const GetInOutsService_1 = __importDefault(require("../../../../inOuts/services/GetInOutsService"));
+const RegisterInOutsService_1 = __importDefault(require("../../../../inOuts/services/RegisterInOutsService"));
+const UpdateInOutService_1 = __importDefault(require("../../../../inOuts/services/UpdateInOutService"));
 const class_transformer_1 = require("class-transformer");
 const tsyringe_1 = require("tsyringe");
 class InOutsController {

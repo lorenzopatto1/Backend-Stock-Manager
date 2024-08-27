@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = ensureMatrixAuthenticate;
-const auth_1 = __importDefault(require("@config/auth"));
-const AppError_1 = __importDefault(require("@shared/errors/AppError"));
+const auth_1 = __importDefault(require("../../../../config/auth"));
+const AppError_1 = __importDefault(require("../../../errors/AppError"));
 const jsonwebtoken_1 = require("jsonwebtoken");
 function ensureMatrixAuthenticate(request, response, next) {
     const authToken = request.headers.authorization;

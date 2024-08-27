@@ -12,10 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const DeleteSaleService_1 = __importDefault(require("@modules/sales/services/DeleteSaleService"));
-const FindSaleByIdService_1 = __importDefault(require("@modules/sales/services/FindSaleByIdService"));
-const FindSalesByEstablishmentIdService_1 = __importDefault(require("@modules/sales/services/FindSalesByEstablishmentIdService"));
-const RegisterSaleService_1 = __importDefault(require("@modules/sales/services/RegisterSaleService"));
+const DeleteSaleService_1 = __importDefault(require("../../../../sales/services/DeleteSaleService"));
+const FindSaleByIdService_1 = __importDefault(require("../../../../sales/services/FindSaleByIdService"));
+const FindSalesByEstablishmentIdService_1 = __importDefault(require("../../../../sales/services/FindSalesByEstablishmentIdService"));
+const RegisterSaleService_1 = __importDefault(require("../../../../sales/services/RegisterSaleService"));
 const class_transformer_1 = require("class-transformer");
 const tsyringe_1 = require("tsyringe");
 class SalesController {

@@ -21,7 +21,7 @@ app.use((0, cors_1.default)({
 app.use(express_1.default.json());
 app.use(routes_1.default);
 app.use((0, celebrate_1.errors)());
-const port = process.env.APP_PORT || 3333;
+const port = process.env.APP_PORT || 3000;
 app.use((err, request, response, _) => {
     if (err instanceof AppError_1.default) {
         return response
