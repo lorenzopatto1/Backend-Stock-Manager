@@ -26,7 +26,7 @@ let GetCategorysService = class GetCategorysService {
         return __awaiter(this, void 0, void 0, function* () {
             const getProducts = tsyringe_1.container.resolve(GetProductsByEstablishmentIdService_1.default);
             const products = yield getProducts.execute(establishment_Id);
-            const categorys = products.map((product) => product.category);
+            const categorys = [...new Set(products.map((product) => product.category))];
             if (!categorys) {
                 throw new AppError_1.default("Não encontramos suas categorias");
             }
