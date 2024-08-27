@@ -25,7 +25,7 @@ app.use(routes);
 
 app.use(errors());
 
-const port = process.env.APP_PORT || 3333;
+const port = process.env.APP_PORT || 3000;
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {
