@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const RefreshTokenMatrixService_1 = __importDefault(require("@modules/matrixes/services/RefreshTokenMatrixService"));
+const RefreshTokenMatrixService_1 = __importDefault(require("../../../../matrixes/services/RefreshTokenMatrixService"));
 const tsyringe_1 = require("tsyringe");
 class MatrixRefreshTokenController {
     create(request, response) {

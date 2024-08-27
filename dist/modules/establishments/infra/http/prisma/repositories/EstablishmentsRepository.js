@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const database_1 = require("database");
+const database_1 = require("../../../../../../database");
 class EstablishmentsRepository {
     findById(id) {
         return __awaiter(this, void 0, void 0, function* () {

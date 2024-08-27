@@ -20,7 +20,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const GetProductsByEstablishmentIdService_1 = __importDefault(require("./GetProductsByEstablishmentIdService"));
 const tsyringe_1 = require("tsyringe");
-const AppError_1 = __importDefault(require("@shared/errors/AppError"));
+const AppError_1 = __importDefault(require("../../../shared/errors/AppError"));
 let GetCategorysService = class GetCategorysService {
     execute(establishment_Id) {
         return __awaiter(this, void 0, void 0, function* () {

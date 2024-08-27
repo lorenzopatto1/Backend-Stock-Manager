@@ -12,10 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const CreateEstablishmentService_1 = __importDefault(require("@modules/establishments/services/CreateEstablishmentService"));
-const DeleteEstablishmentService_1 = __importDefault(require("@modules/establishments/services/DeleteEstablishmentService"));
-const GetEstablishmentService_1 = __importDefault(require("@modules/establishments/services/GetEstablishmentService"));
-const UpdateEstablishmentService_1 = __importDefault(require("@modules/establishments/services/UpdateEstablishmentService"));
+const CreateEstablishmentService_1 = __importDefault(require("../../../../establishments/services/CreateEstablishmentService"));
+const DeleteEstablishmentService_1 = __importDefault(require("../../../../establishments/services/DeleteEstablishmentService"));
+const GetEstablishmentService_1 = __importDefault(require("../../../../establishments/services/GetEstablishmentService"));
+const UpdateEstablishmentService_1 = __importDefault(require("../../../../establishments/services/UpdateEstablishmentService"));
 const class_transformer_1 = require("class-transformer");
 const tsyringe_1 = require("tsyringe");
 class EstablishmentController {

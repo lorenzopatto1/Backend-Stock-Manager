@@ -27,7 +27,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const uuid_1 = require("uuid");
 const client_1 = require("@prisma/client");
 const tsyringe_1 = require("tsyringe");
-const AppError_1 = __importDefault(require("@shared/errors/AppError"));
+const AppError_1 = __importDefault(require("../../../shared/errors/AppError"));
 let RegisterInOutsService = class RegisterInOutsService {
     constructor(inOutsRepository) {
         this.inOutsRepository = inOutsRepository;

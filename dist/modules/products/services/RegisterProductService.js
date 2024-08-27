@@ -26,7 +26,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const tsyringe_1 = require("tsyringe");
 const client_1 = require("@prisma/client");
-const AppError_1 = __importDefault(require("@shared/errors/AppError"));
+const AppError_1 = __importDefault(require("../../../shared/errors/AppError"));
 let RegisterProductService = class RegisterProductService {
     constructor(productsRepository) {
         this.productsRepository = productsRepository;

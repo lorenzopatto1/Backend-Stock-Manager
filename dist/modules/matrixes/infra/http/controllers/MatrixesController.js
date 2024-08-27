@@ -16,7 +16,7 @@ const CreateMatrixService_1 = __importDefault(require("../../../services/CreateM
 const tsyringe_1 = require("tsyringe");
 const class_transformer_1 = require("class-transformer");
 const GetMatrixService_1 = __importDefault(require("../../../services/GetMatrixService"));
-const UpdateMatrixService_1 = __importDefault(require("@modules/matrixes/services/UpdateMatrixService"));
+const UpdateMatrixService_1 = __importDefault(require("../../../../matrixes/services/UpdateMatrixService"));
 class MatrixesController {
     read(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
