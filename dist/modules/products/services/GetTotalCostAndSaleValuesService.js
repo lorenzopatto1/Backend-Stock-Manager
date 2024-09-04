@@ -19,7 +19,7 @@ class GetTotalCostAndSaleValuesService {
         return __awaiter(this, void 0, void 0, function* () {
             const getProducts = tsyringe_1.container.resolve(GetProductsByEstablishmentIdService_1.default);
             const products = yield getProducts.execute(establishment_Id);
-            const unityProducts = products.filter((product) => product.type !== "Mix");
+            const unityProducts = products.filter((product) => product.type !== "Mix" && product.quantity >= 0);
             const totalCost = unityProducts.reduce((acc, product) => (acc += product.purchasePrice * product.quantity), 0);
             const totalSale = unityProducts.reduce((acc, product) => (acc += product.salePrice * product.quantity), 0);
             return { totalCost, totalSale };
