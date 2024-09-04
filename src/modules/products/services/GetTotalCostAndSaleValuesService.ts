@@ -7,7 +7,7 @@ class GetTotalCostAndSaleValuesService {
 
     const products = await getProducts.execute(establishment_Id);
 
-    const unityProducts = products.filter((product) => product.type !== "Mix");
+    const unityProducts = products.filter((product) => product.type !== "Mix" && product.quantity >= 0);
 
     const totalCost = unityProducts.reduce(
       (acc, product) => (acc += product.purchasePrice * product.quantity),

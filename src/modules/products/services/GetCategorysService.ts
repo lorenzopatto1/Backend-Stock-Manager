@@ -1,6 +1,5 @@
 import GetProductsByEstablishmentIdService from "./GetProductsByEstablishmentIdService";
-import { container, inject, injectable } from "tsyringe";
-import IProductsRepository from "../repositories/IProductsRepository";
+import { container, injectable } from "tsyringe";
 import AppError from "@shared/errors/AppError";
 
 @injectable()
