@@ -109,7 +109,7 @@ model Sale {
   products           SoldProduct[]
   firstPayment       String
   firstAmountPaid    Float
-  secondPayment      Int?
+  secondPayment      String?
   secondAmountPaid   Float?
   sellerName         String
   saleDate           DateTime      @default(now())
