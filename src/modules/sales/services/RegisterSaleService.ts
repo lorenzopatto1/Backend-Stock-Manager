@@ -1,9 +1,8 @@
-import { container, inject, injectable } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import ISalesRepository from "../repositories/ISalesRepository";
 import { SoldProduct, Sale } from "@prisma/client";
 import IEstablishmentsRepository from "@modules/establishments/infra/repositories/IEstablishmentsRepository";
 import AppError from "@shared/errors/AppError";
-import IProductsRepository from "@modules/products/repositories/IProductsRepository";
 
 export interface ISaleData extends Sale {
   products: SoldProduct[];
